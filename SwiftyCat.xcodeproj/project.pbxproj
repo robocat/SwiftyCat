@@ -10,6 +10,13 @@
 		FFAF72AF1A63208F00BC40FC /* SwiftyCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFAF72B51A63208F00BC40FC /* SwiftyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */; };
 		FFAF72BC1A63208F00BC40FC /* SwiftyCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72BB1A63208F00BC40FC /* SwiftyCatTests.swift */; };
+		FFAF72C81A6320C400BC40FC /* UIViewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72C71A6320C400BC40FC /* UIViewAutolayout.swift */; };
+		FFAF72CA1A6320CC00BC40FC /* UIViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */; };
+		FFAF72CC1A6320F300BC40FC /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CB1A6320F300BC40FC /* UILabel.swift */; };
+		FFAF72CE1A6320F800BC40FC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CD1A6320F800BC40FC /* UIButton.swift */; };
+		FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */; };
+		FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D11A6322FE00BC40FC /* UIControl.swift */; };
+		FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* dispatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		FFAF72B41A63208F00BC40FC /* SwiftyCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF72BA1A63208F00BC40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF72BB1A63208F00BC40FC /* SwiftyCatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyCatTests.swift; sourceTree = "<group>"; };
+		FFAF72C71A6320C400BC40FC /* UIViewAutolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutolayout.swift; sourceTree = "<group>"; };
+		FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation.swift; sourceTree = "<group>"; };
+		FFAF72CB1A6320F300BC40FC /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		FFAF72CD1A6320F800BC40FC /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
+		FFAF72D11A6322FE00BC40FC /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
+		FFAF72D31A63231400BC40FC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +85,14 @@
 		FFAF72AB1A63208F00BC40FC /* SwiftyCat */ = {
 			isa = PBXGroup;
 			children = (
-				FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */,
 				FFAF72AC1A63208F00BC40FC /* Supporting Files */,
+				FFAF72C71A6320C400BC40FC /* UIViewAutolayout.swift */,
+				FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */,
+				FFAF72CB1A6320F300BC40FC /* UILabel.swift */,
+				FFAF72CD1A6320F800BC40FC /* UIButton.swift */,
+				FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */,
+				FFAF72D11A6322FE00BC40FC /* UIControl.swift */,
+				FFAF72D31A63231400BC40FC /* dispatch.swift */,
 			);
 			path = SwiftyCat;
 			sourceTree = "<group>";
@@ -80,6 +100,7 @@
 		FFAF72AC1A63208F00BC40FC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */,
 				FFAF72AD1A63208F00BC40FC /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -209,6 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */,
+				FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */,
+				FFAF72CE1A6320F800BC40FC /* UIButton.swift in Sources */,
+				FFAF72CA1A6320CC00BC40FC /* UIViewAnimation.swift in Sources */,
+				FFAF72C81A6320C400BC40FC /* UIViewAutolayout.swift in Sources */,
+				FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */,
+				FFAF72CC1A6320F300BC40FC /* UILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +347,7 @@
 		FFAF72C01A63208F00BC40FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +357,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FFAF72C11A63208F00BC40FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
