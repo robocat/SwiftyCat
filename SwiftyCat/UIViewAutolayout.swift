@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-	func constraints(vertical: String? = nil, horizontal: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
+	public func constraints(vertical: String? = nil, horizontal: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
 		var constraints: [NSLayoutConstraint] = []
 		
 		if let v = vertical {
@@ -27,7 +27,7 @@ extension UIView {
 		return constraints
 	}
 	
-	func constraint(item : UIView, _ attribute : NSLayoutAttribute, _ relation : NSLayoutRelation, _ item2 : UIView? = nil, _ attribute2 : NSLayoutAttribute = .NotAnAttribute, multiplier : CGFloat = 1, constant : CGFloat = 0, priority : UILayoutPriority = 1000) -> NSLayoutConstraint {
+	public func constraint(item : UIView, _ attribute : NSLayoutAttribute, _ relation : NSLayoutRelation, _ item2 : UIView? = nil, _ attribute2 : NSLayoutAttribute = .NotAnAttribute, multiplier : CGFloat = 1, constant : CGFloat = 0, priority : UILayoutPriority = 1000) -> NSLayoutConstraint {
 		item.setTranslatesAutoresizingMaskIntoConstraints(false)
 		item2?.setTranslatesAutoresizingMaskIntoConstraints(false)
 		
@@ -39,42 +39,42 @@ extension UIView {
 		return constraint
 	}
 	
-	func addSubviews(subviews : UIView...) {
+	public func addSubviews(subviews : UIView...) {
 		for view in subviews {
 			addSubview(view)
 		}
 	}
 	
-	func addSubviews(subviews : [UIView]) {
+	public func addSubviews(subviews : [UIView]) {
 		for view in subviews {
 			addSubview(view)
 		}
 	}
 	
-	func addConstraintsWithFormat(format: String, views: [String: UIView]) -> [NSLayoutConstraint] {
+	public func addConstraintsWithFormat(format: String, views: [String: UIView]) -> [NSLayoutConstraint] {
 		let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: nil, metrics: nil, views: views)
 		addConstraints(constraints)
 		
 		return constraints as [NSLayoutConstraint]
 	}
 	
-	func setTopSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
+	public func setTopSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
 		return constraint(self, .Top, .Equal, superview, .Top, constant: space)
 	}
 	
-	func setBottomSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
+	public func setBottomSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
 		return constraint(self, .Top, .Equal, superview, .Bottom, constant: space)
 	}
 	
-	func setLeadingSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
+	public func setLeadingSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
 		return constraint(self, .Leading, .Equal, superview, .Leading, constant: space)
 	}
 	
-	func setTrailingSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
+	public func setTrailingSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
 		return constraint(self, .Trailing, .Equal, superview, .Trailing, constant: space)
 	}
 	
-	func setWidthEqualToSuperView() -> NSLayoutConstraint {
+	public func setWidthEqualToSuperView() -> NSLayoutConstraint {
 		return constraint(self, .Width, .Equal, superview, .Width)
 	}
 }
