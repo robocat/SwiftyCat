@@ -140,7 +140,7 @@ public class PurchaseManager : NSObject {
 	}
 }
 
-extension PurchaseManager : SKProductsRequestDelegate, SKPaymentTransactionObserver {
+extension PurchaseManager : SKPaymentTransactionObserver {
 	public func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
 		for transaction in transactions as [SKPaymentTransaction] {
 			switch transaction.transactionState {
@@ -160,9 +160,9 @@ extension PurchaseManager : SKProductsRequestDelegate, SKPaymentTransactionObser
 	public func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue!) {
 		restoreCompletion?(.Success)
 	}
-	
-	// MARK: SKProductsRequestDelegate
-	
+}
+
+extension PurchaseManager : SKProductsRequestDelegate {
 	public func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!) {
 		if response.invalidProductIdentifiers.count > 0 {
 			println("Invalid product indentififers: \(response.invalidProductIdentifiers)")
