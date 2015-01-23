@@ -17,6 +17,8 @@
 		FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */; };
 		FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D11A6322FE00BC40FC /* UIControl.swift */; };
 		FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* dispatch.swift */; };
+		FFCD40C81A72794F00A6AEFE /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */; };
+		FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		FFAF72D11A6322FE00BC40FC /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		FFAF72D31A63231400BC40FC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
+		FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				FFAF72AB1A63208F00BC40FC /* SwiftyCat */,
+				FFAF72AC1A63208F00BC40FC /* Supporting Files */,
 				FFAF72B81A63208F00BC40FC /* SwiftyCatTests */,
 				FFAF72AA1A63208F00BC40FC /* Products */,
 			);
@@ -85,7 +90,6 @@
 		FFAF72AB1A63208F00BC40FC /* SwiftyCat */ = {
 			isa = PBXGroup;
 			children = (
-				FFAF72AC1A63208F00BC40FC /* Supporting Files */,
 				FFAF72C71A6320C400BC40FC /* UIViewAutolayout.swift */,
 				FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */,
 				FFAF72CB1A6320F300BC40FC /* UILabel.swift */,
@@ -93,6 +97,8 @@
 				FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */,
 				FFAF72D11A6322FE00BC40FC /* UIControl.swift */,
 				FFAF72D31A63231400BC40FC /* dispatch.swift */,
+				FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */,
+				FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */,
 			);
 			path = SwiftyCat;
 			sourceTree = "<group>";
@@ -104,6 +110,7 @@
 				FFAF72AD1A63208F00BC40FC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = SwiftyCat;
 			sourceTree = "<group>";
 		};
 		FFAF72B81A63208F00BC40FC /* SwiftyCatTests */ = {
@@ -236,6 +243,8 @@
 				FFAF72CA1A6320CC00BC40FC /* UIViewAnimation.swift in Sources */,
 				FFAF72C81A6320C400BC40FC /* UIViewAutolayout.swift in Sources */,
 				FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */,
+				FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */,
+				FFCD40C81A72794F00A6AEFE /* PurchaseManager.swift in Sources */,
 				FFAF72CC1A6320F300BC40FC /* UILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +435,7 @@
 				FFAF72C11A63208F00BC40FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFAF72C21A63208F00BC40FC /* Build configuration list for PBXNativeTarget "SwiftyCatTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +444,7 @@
 				FFAF72C41A63208F00BC40FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
