@@ -9,33 +9,33 @@
 import Foundation
 import StoreKit
 
-enum PurchaseManagerNotification : String {
+public enum PurchaseManagerNotification : String {
 	case didPurchase = "cat.robo.SwiftyCat.PurchaseManagerDidPurchase"
 	case didRestore = "cat.robo.SwiftyCat.PurchaseManagerDidRestore"
 	
-	static let transactionIdKey = "PurchaseManagerNotification.transactionId"
-	static let dateKey = "PurchaseManagerNotification.date"
+	public static let transactionIdKey = "PurchaseManagerNotification.transactionId"
+	public static let dateKey = "PurchaseManagerNotification.date"
 }
 
-enum PurchaseManagerError : Int {
-	static let errorDomain = "cat.robo.SwiftyCat.PurchaseManagerErrorDomain"
+public enum PurchaseManagerError : Int {
+	public static let errorDomain = "cat.robo.SwiftyCat.PurchaseManagerErrorDomain"
 	
 	case IAPUnavailable = 1001
 	case ProductsNotLoaded = 1002
 	
-	var errorValue : NSError {
+	public var errorValue : NSError {
 		return NSError(domain: PurchaseManagerError.errorDomain, code: rawValue, userInfo: nil)
 	}
 }
 
-class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
-	enum PurchaseResult {
+public class PurchaseManager : NSObject {
+	public enum PurchaseResult {
 		case Cancelled
 		case Failure(error : NSError)
 		case Success(transactionId : String, date : NSDate)
 	}
 	
-	enum RestoreResult {
+	public enum RestoreResult {
 		case Cancelled
 		case Failure(error : NSError)
 		case Success
@@ -48,14 +48,14 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 	
 	private lazy var priceFormatter : NSNumberFormatter = self.setupPriceFormatter()
 	
-	func setupPriceFormatter() -> NSNumberFormatter {
+	private func setupPriceFormatter() -> NSNumberFormatter {
 		let formatter = NSNumberFormatter()
 		formatter.formatterBehavior = .Behavior10_4
 		formatter.numberStyle = .CurrencyStyle
 		return formatter
 	}
 	
-	func loadProducts(productIds : [String]) {
+	public func loadProducts(productIds : [String]) {
 		SKPaymentQueue.defaultQueue().addTransactionObserver(self)
 		
 		let request = SKProductsRequest(productIdentifiers: NSSet(array: productIds))
@@ -63,7 +63,7 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		request.start()
 	}
 	
-	func priceOfProduct(productId : String) -> String? {
+	public func priceOfProduct(productId : String) -> String? {
 		if let product = products[productId] {
 			priceFormatter.locale = product.priceLocale
 			return priceFormatter.stringFromNumber(product.price)
@@ -72,12 +72,12 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		}
 	}
 	
-	func restorePurchases(completion : RestoreResult -> Void) {
+	public func restorePurchases(completion : RestoreResult -> Void) {
 		restoreCompletion = completion
 		SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
 	}
 	
-	func purchaseProduct(productId : String, completion : PurchaseResult -> Void) {
+	public func purchaseProduct(productId : String, completion : PurchaseResult -> Void) {
 		if !SKPaymentQueue.canMakePayments() {
 			completion(.Failure(error: PurchaseManagerError.IAPUnavailable.errorValue))
 		} else if let product = products[productId] {
@@ -88,15 +88,15 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		}
 	}
 	
-	func transactionIsPurchasing(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
+	private func transactionIsPurchasing(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
 		
 	}
 	
-	func transactionIsDeferred(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
+	private func transactionIsDeferred(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
 		
 	}
 	
-	func transactionIsPurchased(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
+	private func transactionIsPurchased(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
 		purchaseCompletion?(.Success(transactionId: transaction.transactionIdentifier, date: transaction.transactionDate))
 		purchaseCompletion = nil
 		
@@ -110,7 +110,7 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		queue.finishTransaction(transaction)
 	}
 	
-	func transactionHasFailed(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
+	private func transactionHasFailed(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
 		if let error = transaction.error {
 			if error.code == SKErrorPaymentCancelled {
 				purchaseCompletion?(.Cancelled)
@@ -125,7 +125,7 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		queue.finishTransaction(transaction)
 	}
 	
-	func transactionIsRestored(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
+	private func transactionIsRestored(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
 		let info = [
 			PurchaseManagerNotification.transactionIdKey: transaction.transactionIdentifier,
 			PurchaseManagerNotification.dateKey: transaction.transactionDate,
@@ -138,10 +138,10 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		
 		queue.finishTransaction(transaction)
 	}
-	
-	// MARK: SKPaymentTransactionObserver
-	
-	func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
+}
+
+extension PurchaseManager : SKProductsRequestDelegate, SKPaymentTransactionObserver {
+	public func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
 		for transaction in transactions as [SKPaymentTransaction] {
 			switch transaction.transactionState {
 			case .Purchasing: transactionIsPurchasing(transaction, queue: queue)
@@ -153,17 +153,17 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		}
 	}
 	
-	func paymentQueue(queue: SKPaymentQueue!, restoreCompletedTransactionsFailedWithError error: NSError!) {
+	public func paymentQueue(queue: SKPaymentQueue!, restoreCompletedTransactionsFailedWithError error: NSError!) {
 		restoreCompletion?(.Failure(error: error))
 	}
 	
-	func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue!) {
+	public func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue!) {
 		restoreCompletion?(.Success)
 	}
 	
 	// MARK: SKProductsRequestDelegate
 	
-	func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!) {
+	public func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!) {
 		if response.invalidProductIdentifiers.count > 0 {
 			println("Invalid product indentififers: \(response.invalidProductIdentifiers)")
 		}
@@ -173,4 +173,3 @@ class PurchaseManager : NSObject, SKProductsRequestDelegate, SKPaymentTransactio
 		}
 	}
 }
-
