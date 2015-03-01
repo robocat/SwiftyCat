@@ -57,8 +57,8 @@ public class PurchaseManager : NSObject {
 	
 	public func loadProducts(productIds : [String]) {
 		SKPaymentQueue.defaultQueue().addTransactionObserver(self)
-		
-		let request = SKProductsRequest(productIdentifiers: NSSet(array: productIds))
+        
+		let request = SKProductsRequest(productIdentifiers: Set(productIds))
 		request.delegate = self
 		request.start()
 	}
@@ -142,7 +142,7 @@ public class PurchaseManager : NSObject {
 
 extension PurchaseManager : SKPaymentTransactionObserver {
 	public func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
-		for transaction in transactions as [SKPaymentTransaction] {
+		for transaction in transactions as! [SKPaymentTransaction] {
 			switch transaction.transactionState {
 			case .Purchasing: transactionIsPurchasing(transaction, queue: queue)
 			case .Deferred: transactionIsDeferred(transaction, queue: queue)
@@ -168,7 +168,7 @@ extension PurchaseManager : SKProductsRequestDelegate {
 			println("Invalid product indentififers: \(response.invalidProductIdentifiers)")
 		}
 		
-		for product in response.products as [SKProduct] {
+		for product in response.products as! [SKProduct] {
 			products[product.productIdentifier] = product
 		}
 	}

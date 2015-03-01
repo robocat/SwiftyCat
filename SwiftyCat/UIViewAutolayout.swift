@@ -61,7 +61,7 @@ extension UIView {
 		let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: nil, metrics: nil, views: views)
 		addConstraints(constraints)
 		
-		return constraints as [NSLayoutConstraint]
+		return constraints as! [NSLayoutConstraint]
 	}
 	
 	public func setTopSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {

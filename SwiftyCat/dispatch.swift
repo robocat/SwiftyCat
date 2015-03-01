@@ -13,7 +13,7 @@ public func dispatch_main(block : Void -> Void) {
 }
 
 public func dispatch_after(seconds : Double, queue : dispatch_queue_t? = nil, callback : Void -> Void) {
-	let dispatch_to = queue ?? dispatch_get_main_queue()
+    let dispatch_to: dispatch_queue_t = queue ?? dispatch_get_main_queue()
 	let time = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC)))
 	dispatch_after(time, dispatch_to, callback)
 }
