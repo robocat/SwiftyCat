@@ -13,11 +13,11 @@ extension UIView {
 		var constraints: [NSLayoutConstraint] = []
 		
 		if let v = vertical {
-			constraints += addConstraintsWithFormat("V:\(v)", views: views) as [NSLayoutConstraint]
+            constraints += addConstraintsWithFormat("V:\(v)", views: views)
 		}
 		
 		if let h = horizontal {
-			constraints += addConstraintsWithFormat("H:\(h)", views: views) as [NSLayoutConstraint]
+			constraints += addConstraintsWithFormat("H:\(h)", views: views)
 		}
 		
 		for (_, view) in views {
@@ -61,7 +61,7 @@ extension UIView {
 		let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: nil, metrics: nil, views: views)
 		addConstraints(constraints)
 		
-		return constraints as! [NSLayoutConstraint]
+		return constraints as NSArray as! [NSLayoutConstraint]
 	}
 	
 	public func setTopSpaceToSuperView(space: CGFloat) -> NSLayoutConstraint {
