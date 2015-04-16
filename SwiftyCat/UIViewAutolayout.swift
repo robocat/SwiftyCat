@@ -120,4 +120,11 @@ extension UIView {
         return [ centerXInSuperView(offset: offset.x), centerYInSuperView(offset: offset.y) ]
     }
     
+    public func edgesEqualsSuperView(inset: UIEdgeInsets = UIEdgeInsetsZero) {
+        superview?.constraints(
+            vertical: "|-\(inset.top)-[view]-\(inset.bottom)-|",
+            horizontal: "|-\(inset.left)-[view]-\(inset.right)-|",
+            [ "view": self ])
+    }
+    
 }
