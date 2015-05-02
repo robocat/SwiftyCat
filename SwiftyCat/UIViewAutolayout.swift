@@ -128,3 +128,15 @@ extension UIView {
     }
     
 }
+
+public extension UIViewController {
+    
+    public func alignViewToTopLayoutGuide(view: UIView, viewAttribute: NSLayoutAttribute = .Top, space: CGFloat = 0, layoutGuideAttribute: NSLayoutAttribute = .Bottom) -> NSLayoutConstraint {
+        return view.superview!.constraintToLayoutSupport(view, viewAttribute, .Equal, topLayoutGuide, layoutGuideAttribute, constant: space)
+    }
+    
+    public func alignViewToBottomLayoutGuide(view: UIView, viewAttribute: NSLayoutAttribute = .Bottom, space: CGFloat = 0, layoutGuideAttribute: NSLayoutAttribute = .Top) -> NSLayoutConstraint {
+        return view.superview!.constraintToLayoutSupport(view, viewAttribute, .Equal, bottomLayoutGuide, layoutGuideAttribute, constant: space)
+    }
+    
+}
