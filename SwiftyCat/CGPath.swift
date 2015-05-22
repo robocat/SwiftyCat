@@ -9,57 +9,57 @@
 import CoreGraphics
 
 extension CGPath {
-	static func mutablePath() -> CGMutablePath {
-		return CGPathCreateMutable()
-	}
-	
-	static func pathWithRect(rect : CGRect) -> CGPath {
+	public static func pathWithRect(rect : CGRect) -> CGPath {
 		return CGPathCreateWithRect(rect, nil)
 	}
 	
-	static func pathWithEllipse(inRect rect : CGRect) -> CGPath {
+	public static func pathWithEllipse(inRect rect : CGRect) -> CGPath {
 		return CGPathCreateWithEllipseInRect(rect, nil)
 	}
 	
-	static func pathWithRoundedRect(rect : CGRect, cornerSize : CGSize) -> CGPath {
+	public static func pathWithRoundedRect(rect : CGRect, cornerSize : CGSize) -> CGPath {
 		return CGPathCreateWithRoundedRect(rect, cornerSize.width, cornerSize.height, nil)
 	}
 	
-	func mutableCopy() -> CGMutablePath {
+	public func mutableCopy() -> CGMutablePath {
 		return CGPathCreateMutableCopy(self)
 	}
 	
-	func containsPoint(point : CGPoint) -> Bool {
+	public func containsPoint(point : CGPoint) -> Bool {
 		return CGPathContainsPoint(self, nil, point, false)
 	}
 	
-	func boundingBox() -> CGRect {
+	public func boundingBox() -> CGRect {
 		return CGPathGetPathBoundingBox(self)
 	}
 	
-	var currentPoint : CGPoint {
+	public var currentPoint : CGPoint {
 		return CGPathGetCurrentPoint(self)
 	}
 }
 
 extension CGMutablePath {
-	func moveToPoint(point : CGPoint) {
+	public static func mutablePath() -> CGMutablePath {
+		return CGPathCreateMutable()
+	}
+	
+	public func moveToPoint(point : CGPoint) {
 		CGPathMoveToPoint(self, nil, point.x, point.y)
 	}
 	
-	func moveToPoint(x : CGFloat, y : CGFloat) {
+	public func moveToPoint(x : CGFloat, y : CGFloat) {
 		CGPathMoveToPoint(self, nil, x, y)
 	}
 	
-	func addLineToPoint(point : CGPoint) {
+	public func addLineToPoint(point : CGPoint) {
 		CGPathAddLineToPoint(self, nil, point.x, point.y)
 	}
 	
-	func addLineToPoint(x : CGFloat, y : CGFloat) {
+	public func addLineToPoint(x : CGFloat, y : CGFloat) {
 		CGPathAddLineToPoint(self, nil, x, y)
 	}
 	
-	func closeSubpath() {
+	public func closeSubpath() {
 		CGPathCloseSubpath(self)
 	}
 }
