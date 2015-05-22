@@ -47,7 +47,7 @@ extension CGMutablePath {
 		CGPathMoveToPoint(self, nil, point.x, point.y)
 	}
 	
-	public func moveToPoint(x : CGFloat, y : CGFloat) {
+	public func moveToPoint(#x : CGFloat, y : CGFloat) {
 		CGPathMoveToPoint(self, nil, x, y)
 	}
 	
@@ -55,7 +55,7 @@ extension CGMutablePath {
 		CGPathAddLineToPoint(self, nil, point.x, point.y)
 	}
 	
-	public func addLineToPoint(x : CGFloat, y : CGFloat) {
+	public func addLineToPoint(#x : CGFloat, y : CGFloat) {
 		CGPathAddLineToPoint(self, nil, x, y)
 	}
 	
