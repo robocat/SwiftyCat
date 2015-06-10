@@ -97,15 +97,17 @@ public class PurchaseManager : NSObject {
 	}
 	
 	private func transactionIsPurchased(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
-		purchaseCompletion?(.Success(transactionId: transaction.transactionIdentifier, date: transaction.transactionDate))
-		purchaseCompletion = nil
-		
-		let info = [
-			PurchaseManagerNotification.transactionIdKey: transaction.transactionIdentifier,
-			PurchaseManagerNotification.dateKey: transaction.transactionDate,
-		]
-		
-		NSNotificationCenter.postNotification(PurchaseManagerNotification.didPurchase.rawValue, from: self, info: info)
+		if let transactionId = transaction.transactionIdentifier, transactionDate = transaction.transactionDate {
+			purchaseCompletion?(.Success(transactionId: transactionId, date: transactionDate))
+			purchaseCompletion = nil
+			
+			let info = [
+				PurchaseManagerNotification.transactionIdKey: transactionId,
+				PurchaseManagerNotification.dateKey: transactionDate,
+			]
+			
+			NSNotificationCenter.postNotification(PurchaseManagerNotification.didPurchase.rawValue, from: self, info: info)
+		}
 		
 		queue.finishTransaction(transaction)
 	}
@@ -126,23 +128,25 @@ public class PurchaseManager : NSObject {
 	}
 	
 	private func transactionIsRestored(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
-		let info = [
-			PurchaseManagerNotification.transactionIdKey: transaction.transactionIdentifier,
-			PurchaseManagerNotification.dateKey: transaction.transactionDate,
-		]
-		
-		NSNotificationCenter.postNotification(PurchaseManagerNotification.didRestore.rawValue, from: self, info: info)
-		
-		purchaseCompletion?(.Success(transactionId: transaction.transactionIdentifier, date: transaction.transactionDate))
-		purchaseCompletion = nil
+		if let transactionId = transaction.transactionIdentifier, transactionDate = transaction.transactionDate {
+			purchaseCompletion?(.Success(transactionId: transactionId, date: transactionDate))
+			purchaseCompletion = nil
+			
+			let info = [
+				PurchaseManagerNotification.transactionIdKey: transactionId,
+				PurchaseManagerNotification.dateKey: transactionDate,
+			]
+			
+			NSNotificationCenter.postNotification(PurchaseManagerNotification.didRestore.rawValue, from: self, info: info)
+		}
 		
 		queue.finishTransaction(transaction)
 	}
 }
 
 extension PurchaseManager : SKPaymentTransactionObserver {
-	public func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
-		for transaction in transactions as! [SKPaymentTransaction] {
+	public func paymentQueue(queue : SKPaymentQueue, updatedTransactions transactions : [SKPaymentTransaction]) {
+		for transaction in transactions {
 			switch transaction.transactionState {
 			case .Purchasing: transactionIsPurchasing(transaction, queue: queue)
 			case .Deferred: transactionIsDeferred(transaction, queue: queue)
@@ -153,22 +157,22 @@ extension PurchaseManager : SKPaymentTransactionObserver {
 		}
 	}
 	
-	public func paymentQueue(queue: SKPaymentQueue!, restoreCompletedTransactionsFailedWithError error: NSError!) {
+	public func paymentQueue(queue : SKPaymentQueue, restoreCompletedTransactionsFailedWithError error : NSError) {
 		restoreCompletion?(.Failure(error: error))
 	}
 	
-	public func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue!) {
+	public func paymentQueueRestoreCompletedTransactionsFinished(queue : SKPaymentQueue) {
 		restoreCompletion?(.Success)
 	}
 }
 
 extension PurchaseManager : SKProductsRequestDelegate {
-	public func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!) {
+	public func productsRequest(request : SKProductsRequest, didReceiveResponse response : SKProductsResponse) {
 		if response.invalidProductIdentifiers.count > 0 {
-			println("Invalid product indentififers: \(response.invalidProductIdentifiers)")
+			print("Invalid product indentififers: \(response.invalidProductIdentifiers)")
 		}
 		
-		for product in response.products as! [SKProduct] {
+		for product in response.products {
 			products[product.productIdentifier] = product
 		}
 	}

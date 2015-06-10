@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIView {
-	public func constraints(vertical: String? = nil, horizontal: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
+	public func constraints(vertical vertical: String? = nil, horizontal: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
 		var constraints: [NSLayoutConstraint] = []
 		
 		if let v = vertical {
@@ -21,24 +21,24 @@ extension UIView {
 		}
 		
 		for (_, view) in views {
-			view.setTranslatesAutoresizingMaskIntoConstraints(false)
+			view.translatesAutoresizingMaskIntoConstraints = false
 		}
 		
 		return constraints
 	}
 	
-	public func constraints(vertical: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
+	public func constraints(vertical vertical: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
 		return constraints(vertical: vertical, horizontal: nil, views)
 	}
 	
 	public func constraint(item : UIView, _ attribute : NSLayoutAttribute, _ relation : NSLayoutRelation, _ item2 : UIView? = nil, _ attribute2 : NSLayoutAttribute = .NotAnAttribute, multiplier : CGFloat = 1, constant : CGFloat = 0, priority : UILayoutPriority = 1000) -> NSLayoutConstraint {
-		item.setTranslatesAutoresizingMaskIntoConstraints(false)
-		item2?.setTranslatesAutoresizingMaskIntoConstraints(false)
+		item.translatesAutoresizingMaskIntoConstraints = false
+		item2?.translatesAutoresizingMaskIntoConstraints = false
 		return constraintUsing(item, attribute, relation, item2, attribute2, multiplier: multiplier, constant: constant, priority: priority)
     }
     
     public func constraintToLayoutSupport(item : UIView, _ attribute : NSLayoutAttribute, _ relation : NSLayoutRelation, _ item2 : UILayoutSupport, _ attribute2 : NSLayoutAttribute = .NotAnAttribute, multiplier : CGFloat = 1, constant : CGFloat = 0, priority : UILayoutPriority = 1000) -> NSLayoutConstraint {
-        item.setTranslatesAutoresizingMaskIntoConstraints(false)
+        item.translatesAutoresizingMaskIntoConstraints = false
         return constraintUsing(item, attribute, relation, item2, attribute2, multiplier: multiplier, constant: constant, priority: priority)
     }
     
@@ -66,7 +66,7 @@ extension UIView {
 	}
 	
 	public func addConstraintsWithFormat(format: String, views: [String: UIView]) -> [NSLayoutConstraint] {
-		let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: nil, metrics: nil, views: views)
+		let constraints = NSLayoutConstraint.constraintsWithVisualFormat(format, options: [], metrics: nil, views: views)
 		addConstraints(constraints)
 		
 		return constraints as NSArray as! [NSLayoutConstraint]
@@ -108,13 +108,13 @@ extension UIView {
         return constraint(self, .Height, .Equal, constant: height)
     }
     
-    public func centerXInSuperView(offset: CGFloat = 0) -> NSLayoutConstraint {
+    public func centerXInSuperView(offset offset: CGFloat = 0) -> NSLayoutConstraint {
         let theConstraint = makeConstraint(self, .CenterX, .Equal, superview, .CenterX, constant: offset)
         superview?.addConstraint(theConstraint)
         return theConstraint
     }
     
-    public func centerYInSuperView(offset: CGFloat = 0) -> NSLayoutConstraint {
+    public func centerYInSuperView(offset offset: CGFloat = 0) -> NSLayoutConstraint {
         let theConstraint = makeConstraint(self, .CenterY, .Equal, superview, .CenterY, constant: offset)
         superview?.addConstraint(theConstraint)
         return theConstraint

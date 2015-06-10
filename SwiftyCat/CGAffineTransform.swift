@@ -17,7 +17,7 @@ extension CGAffineTransform {
 		return CGAffineTransformIdentity
 	}
 	
-	public func translate(#x : CGFloat, y : CGFloat) -> CGAffineTransform {
+	public func translate(x x : CGFloat, y : CGFloat) -> CGAffineTransform {
 		return CGAffineTransformTranslate(self, x, y)
 	}
 	
@@ -25,7 +25,7 @@ extension CGAffineTransform {
 		return CGAffineTransformRotate(self, CGFloat(angle))
 	}
 	
-	public func scale(#x : CGFloat, y : CGFloat) -> CGAffineTransform {
+	public func scale(x x : CGFloat, y : CGFloat) -> CGAffineTransform {
 		return CGAffineTransformScale(self, x, y)
 	}
 	
