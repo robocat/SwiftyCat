@@ -27,6 +27,10 @@ extension UIView {
 		return constraints
 	}
 	
+	public func constraints(vertical: String? = nil, _ views: [String : UIView]) -> [NSLayoutConstraint] {
+		return constraints(vertical: vertical, horizontal: nil, views)
+	}
+	
 	public func constraint(item : UIView, _ attribute : NSLayoutAttribute, _ relation : NSLayoutRelation, _ item2 : UIView? = nil, _ attribute2 : NSLayoutAttribute = .NotAnAttribute, multiplier : CGFloat = 1, constant : CGFloat = 0, priority : UILayoutPriority = 1000) -> NSLayoutConstraint {
 		item.setTranslatesAutoresizingMaskIntoConstraints(false)
 		item2?.setTranslatesAutoresizingMaskIntoConstraints(false)

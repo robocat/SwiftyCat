@@ -19,6 +19,7 @@
 		FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* dispatch.swift */; };
 		FFCD40C81A72794F00A6AEFE /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */; };
 		FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */; };
+		FFEC01F41B0F28360069073F /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC01F31B0F28360069073F /* CGPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FFAF72D31A63231400BC40FC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
 		FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
+		FFEC01F31B0F28360069073F /* CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				FFAF72D31A63231400BC40FC /* dispatch.swift */,
 				FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */,
 				FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */,
+				FFEC01F31B0F28360069073F /* CGPath.swift */,
 			);
 			path = SwiftyCat;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */,
 				FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */,
+				FFEC01F41B0F28360069073F /* CGPath.swift in Sources */,
 				FFAF72CE1A6320F800BC40FC /* UIButton.swift in Sources */,
 				FFAF72CA1A6320CC00BC40FC /* UIViewAnimation.swift in Sources */,
 				FFAF72C81A6320C400BC40FC /* UIViewAutolayout.swift in Sources */,
