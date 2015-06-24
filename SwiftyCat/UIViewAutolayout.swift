@@ -127,6 +127,18 @@ extension UIView {
             [ "view": self ])
     }
     
+    public func setWidthEqual(view: UIView, multiplier: CGFloat = 1) -> NSLayoutConstraint {
+        return superview!.constraint(self, .Width, .Equal, view, .Width, multiplier: multiplier)
+    }
+    
+    public func setHeightEqual(view: UIView, multiplier: CGFloat = 1) -> NSLayoutConstraint {
+        return superview!.constraint(self, .Height, .Equal, view, .Height, multiplier: multiplier)
+    }
+    
+    public func setSizeEqual(view: UIView, multiplier: CGFloat = 1) -> [NSLayoutConstraint] {
+        return [ setWidthEqual(view, multiplier: multiplier), setHeightEqual(view, multiplier: multiplier) ]
+    }
+    
 }
 
 public extension UIViewController {
