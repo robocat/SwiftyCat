@@ -22,7 +22,7 @@ extension CGPath {
 	}
 	
 	public func mutableCopy() -> CGMutablePath {
-		return CGPathCreateMutableCopy(self)
+		return CGPathCreateMutableCopy(self)!
 	}
 	
 	public func containsPoint(point : CGPoint) -> Bool {
