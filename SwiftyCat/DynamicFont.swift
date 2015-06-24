@@ -9,7 +9,7 @@
 import UIKit
 
 @available(iOS 9, *)
-enum DynamicFont {
+public enum DynamicFont {
 	case Title1
 	case Title2
 	case Title3
@@ -21,7 +21,7 @@ enum DynamicFont {
 	case Caption1
 	case Caption2
 	
-	var stringValue : String {
+	private var stringValue : String {
 		switch self {
 		case .Title1: return UIFontTextStyleTitle1
 		case .Title2: return UIFontTextStyleTitle2
@@ -38,8 +38,8 @@ enum DynamicFont {
 }
 
 @available(iOS 9, *)
-extension UILabel {
-	func setDynamicFont(textStyle : DynamicFont) {
+public extension UILabel {
+	public func setDynamicFont(textStyle : DynamicFont) {
 		font = UIFont.preferredFontForTextStyle(textStyle.stringValue)
 		
 		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -50,8 +50,8 @@ extension UILabel {
 }
 
 @available(iOS 9, *)
-extension UITextView {
-	func setDynamicFont(textStyle : DynamicFont) {
+public extension UITextView {
+	public func setDynamicFont(textStyle : DynamicFont) {
 		font = UIFont.preferredFontForTextStyle(textStyle.stringValue)
 		
 		NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
@@ -62,8 +62,8 @@ extension UITextView {
 }
 
 @available(iOS 9, *)
-extension UIButton {
-	func setDynamicFont(textStyle : DynamicFont) {
+public extension UIButton {
+	public func setDynamicFont(textStyle : DynamicFont) {
 		titleLabel?.setDynamicFont(textStyle)
 	}
 }
