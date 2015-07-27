@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-	convenience init(hex : UInt32, alpha : CGFloat) {
+	public convenience init(hex : UInt32, alpha : CGFloat = 1) {
 		let red = CGFloat(hex & 0x00ff0000) / CGFloat(0xff)
 		let green = CGFloat(hex & 0x0000ff00) / CGFloat(0xff)
 		let blue = CGFloat(hex & 0x000000ff) / CGFloat(0xff)
