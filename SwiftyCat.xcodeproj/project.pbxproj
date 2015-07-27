@@ -20,6 +20,7 @@
 		FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* dispatch.swift */; };
 		FFCD40C81A72794F00A6AEFE /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */; };
 		FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */; };
+		FFCD8A2B1B663231005E967F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD8A2A1B663231005E967F /* UIColor.swift */; };
 		FFEC01F41B0F28360069073F /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC01F31B0F28360069073F /* CGPath.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		FFAF72D31A63231400BC40FC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
 		FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
+		FFCD8A2A1B663231005E967F /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FFEC01F31B0F28360069073F /* CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */,
 				FFEC01F31B0F28360069073F /* CGPath.swift */,
 				FF4ED0591B3AB20400C95C23 /* DynamicFont.swift */,
+				FFCD8A2A1B663231005E967F /* UIColor.swift */,
 			);
 			path = SwiftyCat;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */,
+				FFCD8A2B1B663231005E967F /* UIColor.swift in Sources */,
 				FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */,
 				FFEC01F41B0F28360069073F /* CGPath.swift in Sources */,
 				FFAF72CE1A6320F800BC40FC /* UIButton.swift in Sources */,
