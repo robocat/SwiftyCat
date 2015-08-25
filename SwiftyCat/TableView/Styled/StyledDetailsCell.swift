@@ -8,17 +8,17 @@
 
 import UIKit
 
-struct DetailsRowType: PressableRowType {
-	static let typeId = "DetailsRowType"
-	let action: Void -> Void
+public struct DetailsRowType: PressableRowType {
+	public static let typeId = "DetailsRowType"
+	public let action: Void -> Void
 }
 
-struct ChoiceDetailsRowType: PressableRowType {
-	static let typeId = "ChoiceDetailsRowType"
-	let action: Void -> Void
+public struct ChoiceDetailsRowType: PressableRowType {
+	public static let typeId = "ChoiceDetailsRowType"
+	public let action: Void -> Void
 }
 
-class StyledDetailsCell: StyledTableViewCell {
+public class StyledDetailsCell: StyledTableViewCell {
 	override func setup() {
 		super.setup()
 		

@@ -8,17 +8,17 @@
 
 import UIKit
 
-struct PlainRowType: RowType {
-	static let typeId = "PlainRowType"
+public struct PlainRowType: RowType {
+	public static let typeId = "PlainRowType"
 }
 
-class StyledTableViewCell: UITableViewCell {
+public class StyledTableViewCell: UITableViewCell {
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 		setup()
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		setup()
 	}

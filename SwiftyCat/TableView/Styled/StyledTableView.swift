@@ -8,18 +8,18 @@
 
 import UIKit
 
-class StyledTableView: UITableView {
-	init() {
+public class StyledTableView: UITableView {
+	public init() {
 		super.init(frame: CGRectZero, style: .Grouped)
 		setup()
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		setup()
 	}
 	
-	func setup() {
+	public func setup() {
 		backgroundColor = UIColor(hex: 0x151413)
 		separatorColor = UIColor(hex: 0x322f2c)
 	}

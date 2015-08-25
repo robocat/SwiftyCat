@@ -8,14 +8,14 @@
 
 import UIKit
 
-struct SelectableRowType: PressableRowType {
-	static let typeId = "SelectableRowType"
-	let selected: Bool
-	let action: Void -> Void
+public struct SelectableRowType: PressableRowType {
+	public static let typeId = "SelectableRowType"
+	public let selected: Bool
+	public let action: Void -> Void
 }
 
-class StyledSelectableCell: StyledTableViewCell, DeclarativeCell {
-	var rowType: RowType? {
+public class StyledSelectableCell: StyledTableViewCell, DeclarativeCell {
+	public var rowType: RowType? {
 		didSet {
 			if let rowType = rowType as? SelectableRowType {
 				accessoryType = (rowType.selected ? .Checkmark: .None)

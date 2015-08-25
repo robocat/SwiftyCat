@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Identifiable {
+public protocol Identifiable {
 	var id: String { get }
 }
 
@@ -16,15 +16,15 @@ protocol Identifiable {
 //	return lhs.id == rhs.id
 //}
 
-class Diff {
-	enum Change {
+public class Diff {
+	public enum Change {
 		case Insert(at: Int)
 		case Remove(at: Int)
 		case Move(from: Int, to: Int)
 		case Update(at: Int)
 	}
 	
-	class func diff(list1: [Identifiable], _ list2: [Identifiable], equals: ((Identifiable, Identifiable) -> Bool)? = nil) -> [Change] {
+	public class func diff(list1: [Identifiable], _ list2: [Identifiable], equals: ((Identifiable, Identifiable) -> Bool)? = nil) -> [Change] {
 		var changes: [Change] = []
 		
 		for (index1, item) in list1.enumerate() {

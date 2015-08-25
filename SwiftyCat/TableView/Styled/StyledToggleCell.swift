@@ -8,16 +8,16 @@
 
 import UIKit
 
-struct ToggleRowType: RowType {
-	static let typeId = "ToggleRowType"
-	let value: Void -> Bool
-	let didToggle: Bool -> Void
+public struct ToggleRowType: RowType {
+	public static let typeId = "ToggleRowType"
+	public let value: Void -> Bool
+	public let didToggle: Bool -> Void
 }
 
-class StyledToggleCell: StyledTableViewCell, DeclarativeCell {
-	let toggle = UISwitch()
+public class StyledToggleCell: StyledTableViewCell, DeclarativeCell {
+	public let toggle = UISwitch()
 	
-	var rowType: RowType? {
+	public var rowType: RowType? {
 		didSet {
 			if let rowType = rowType as? ToggleRowType {
 				toggle.on = rowType.value()

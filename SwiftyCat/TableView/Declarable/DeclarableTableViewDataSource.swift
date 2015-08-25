@@ -8,17 +8,17 @@
 
 import UIKit
 
-class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
-	var sections: [Section] = [] { didSet { /*updateSections(oldValue)*/ } }
+public class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
+	public var sections: [Section] = [] { didSet { /*updateSections(oldValue)*/ } }
 	
-	var registeredRowTypes: [RowType.Type] = []
-	var cellTypeForRowType: (RowType.Type -> UITableViewCell.Type)?
+	public var registeredRowTypes: [RowType.Type] = []
+	public var cellTypeForRowType: (RowType.Type -> UITableViewCell.Type)?
 	
-	var tableView: UITableView?
+	public var tableView: UITableView?
 	
-	var dataChanged: (Void -> Void)?
+	public var dataChanged: (Void -> Void)?
 	
-	func attachToTableView(tableView: UITableView) {
+	public func attachToTableView(tableView: UITableView) {
 		self.tableView = tableView
 		
 		if let cellTypeForRowType = cellTypeForRowType {
@@ -30,7 +30,7 @@ class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
 		tableView.dataSource = self
 	}
 	
-	func updateSections(from: [Section]) {
+	public func updateSections(from: [Section]) {
 		guard let tableView = tableView else { return }
 		let diff = DeclarableTableViewDiff(tableView: tableView)
 		diff.updateTableView(from, to: sections)
@@ -43,10 +43,8 @@ class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
 			}
 		}
 	}
-	
-	
-	
-	func rowAtIndexPath(indexPath: NSIndexPath) -> Row {
+		
+	public func rowAtIndexPath(indexPath: NSIndexPath) -> Row {
 		assert(indexPath.section < sections.count, "Invalid indexPath section")
 		let section = sections[indexPath.section]
 		
@@ -56,17 +54,17 @@ class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
 		return row
 	}
 	
-	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
 		return sections.count
 	}
 	
-	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		assert(section < sections.count, "Invalid section index")
 		
 		return sections[section].rows.count
 	}
 	
-	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+	public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let row = rowAtIndexPath(indexPath)
 		let cellId = row.type.dynamicType.typeId
 		let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
@@ -81,32 +79,32 @@ class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
 		return cell
 	}
 	
-	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+	public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		assert(section < sections.count, "Invalid section index")
 		
 		return sections[section].name
 	}
 	
-	func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+	public func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
 		assert(section < sections.count, "Invalid section index")
 		
 		return sections[section].footer
 	}
 	
-	func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+	public func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 		return rowAtIndexPath(indexPath).type is EditableRowType
 	}
 	
-	func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+	public func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
 		guard let row = rowAtIndexPath(indexPath).type as? EditableRowType else { fatalError("Editing non-editable cell at \(indexPath)") }
 		row.deleteAction()
 	}
 	
-	func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+	public func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
 		return rowAtIndexPath(indexPath).type is MovableRowType
 	}
 	
-	func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+	public func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
 		guard let row = rowAtIndexPath(sourceIndexPath).type as? MovableRowType else { fatalError("Moving non-movable cell at \(sourceIndexPath)") }
 		row.moveAction(IndexPath(indexPath: destinationIndexPath))
 	}

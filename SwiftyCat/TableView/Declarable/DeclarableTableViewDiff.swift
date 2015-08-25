@@ -8,14 +8,14 @@
 
 import UIKit
 
-class DeclarableTableViewDiff {
-	let tableView: UITableView
+public class DeclarableTableViewDiff {
+	public let tableView: UITableView
 	
-	init(tableView: UITableView) {
+	public init(tableView: UITableView) {
 		self.tableView = tableView
 	}
 	
-	func updateTableView(from: [Section], to: [Section]) {
+	public func updateTableView(from: [Section], to: [Section]) {
 		let (sectionChanges, rowChanges) = diffSections(from: from, to: to)
 		
 		if sectionChanges.count > 0 || rowChanges.count > 0 {
@@ -35,7 +35,7 @@ class DeclarableTableViewDiff {
 		}
 	}
 	
-	func sectionEquals(section1: Identifiable, section2: Identifiable) -> Bool {
+	public func sectionEquals(section1: Identifiable, section2: Identifiable) -> Bool {
 		if let section1 = section1 as? Section, section2 = section2 as? Section {
 			return section1 == section2
 		} else {
@@ -43,7 +43,7 @@ class DeclarableTableViewDiff {
 		}
 	}
 	
-	func rowEquals(row1: Identifiable, row2: Identifiable) -> Bool {
+	public func rowEquals(row1: Identifiable, row2: Identifiable) -> Bool {
 		if let row1 = row1 as? Row, row2 = row2 as? Row {
 			if row1 == row2 {
 				if let rowType1 = row1.type as? RowTypeRefresh {
@@ -57,7 +57,7 @@ class DeclarableTableViewDiff {
 		return false
 	}
 	
-	func diffSections(from from: [Section], to: [Section]) -> (sectionChanges: [Diff.Change], rowChanges: [Int: [Diff.Change]]) {
+	public func diffSections(from from: [Section], to: [Section]) -> (sectionChanges: [Diff.Change], rowChanges: [Int: [Diff.Change]]) {
 		let fromIds = from.map { $0 as Identifiable }
 		let toIds = to.map { $0 as Identifiable }
 		
@@ -81,7 +81,7 @@ class DeclarableTableViewDiff {
 		return (sectionChanges, rowChanges)
 	}
 	
-	func applySectionChange(change: Diff.Change) -> Void {
+	public func applySectionChange(change: Diff.Change) -> Void {
 		switch change {
 		case .Insert(let at): tableView.insertSections(NSIndexSet(index: at), withRowAnimation: .Automatic)
 		case .Remove(let at): tableView.deleteSections(NSIndexSet(index: at), withRowAnimation: .Automatic)
@@ -90,7 +90,7 @@ class DeclarableTableViewDiff {
 		}
 	}
 	
-	func applyRowChange(section: Int, change: Diff.Change) -> Void {
+	public func applyRowChange(section: Int, change: Diff.Change) -> Void {
 		switch change {
 		case .Insert(let at): tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: at, inSection: section)], withRowAnimation: .Automatic)
 		case .Remove(let at): tableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: at, inSection: section)], withRowAnimation: .Automatic)

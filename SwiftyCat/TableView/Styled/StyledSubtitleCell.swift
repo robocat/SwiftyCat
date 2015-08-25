@@ -8,23 +8,23 @@
 
 import UIKit
 
-struct ChoiceSubtitleRowType: PressableRowType, RowTypeRefresh {
-	static let typeId = "ChoiceSubtitleRowType"
-	let action: Void -> Void
-	let subtitle: String
+public struct ChoiceSubtitleRowType: PressableRowType, RowTypeRefresh {
+	public static let typeId = "ChoiceSubtitleRowType"
+	public let action: Void -> Void
+	public let subtitle: String
 	
-	func shouldRefresh(to to: RowType) -> Bool {
+	public func shouldRefresh(to to: RowType) -> Bool {
 		return (to as? ChoiceSubtitleRowType)?.subtitle != subtitle
 	}
 }
 
-class StyledSubtitleCell: StyledTableViewCell, DeclarativeCell {
+public class StyledSubtitleCell: StyledTableViewCell, DeclarativeCell {
 	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
 		super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
 		setup()
 	}
 	
-	required init?(coder aDecoder: NSCoder) {
+	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		setup()
 	}
@@ -36,7 +36,7 @@ class StyledSubtitleCell: StyledTableViewCell, DeclarativeCell {
 		accessoryType = .DisclosureIndicator
 	}
 	
-	var rowType: RowType? {
+	public var rowType: RowType? {
 		didSet {
 			if let rowType = rowType as? ChoiceSubtitleRowType {
 				detailTextLabel?.text = rowType.subtitle
