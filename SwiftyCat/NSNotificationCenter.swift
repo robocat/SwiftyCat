@@ -8,10 +8,14 @@
 
 import Foundation
 
-extension NSNotificationCenter {
-	class func postNotification(name : String, from : AnyObject?, info : [String: AnyObject]? = nil) {
+public extension NSNotificationCenter {
+	public class func postNotification(name : String, from : AnyObject?, info : [String: AnyObject]? = nil) {
 		NSNotificationCenter.defaultCenter().postNotificationName(name, object: from, userInfo: info)
 	}
+    
+    public class func on(notification : String, on : AnyObject? = nil, doThis : NSNotification -> Void) {
+        defaultCenter().addObserverForName(notification, object: on, queue: nil, usingBlock: doThis)
+    }
 }
 
 extension NSNotification {

@@ -8,12 +8,12 @@
 
 import UIKit
 
-extension UIControl {
-	public func addUpdateAction(target target : AnyObject?, action : Selector!) {
-		addTarget(target, action: action, forControlEvents: .ValueChanged)
-	}
-	
-	public func addTouchAction(target target : AnyObject?, action : Selector!) {
-		addTarget(target, action: action, forControlEvents: .TouchUpInside)
-	}
-}
+//extension UIControl {
+//	public func addUpdateAction(target target : AnyObject?, action : Selector!) {
+//		addTarget(target, action: action, forControlEvents: .ValueChanged)
+//	}
+//	
+//	public func addTouchAction(target target : AnyObject?, action : Selector!) {
+//		addTarget(target, action: action, forControlEvents: .TouchUpInside)
+//	}
+//}

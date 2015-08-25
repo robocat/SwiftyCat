@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		72AA391D1B8C574800341E21 /* Robolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA391C1B8C574800341E21 /* Robolayout.swift */; };
+		72AA391F1B8C5B6500341E21 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA391E1B8C5B6500341E21 /* UIView.swift */; };
+		72AA39271B8C5C3A00341E21 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA39261B8C5C3900341E21 /* String.swift */; };
+		72AA39291B8C5C4F00341E21 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA39281B8C5C4F00341E21 /* UIImage.swift */; };
 		FF4ED05A1B3AB20400C95C23 /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4ED0591B3AB20400C95C23 /* DynamicFont.swift */; };
 		FFAF72AF1A63208F00BC40FC /* SwiftyCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFAF72B51A63208F00BC40FC /* SwiftyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */; };
@@ -18,7 +21,6 @@
 		FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */; };
 		FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D11A6322FE00BC40FC /* UIControl.swift */; };
 		FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* dispatch.swift */; };
-		FFCD40C81A72794F00A6AEFE /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */; };
 		FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */; };
 		FFCD8A2B1B663231005E967F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD8A2A1B663231005E967F /* UIColor.swift */; };
 		FFEC01F41B0F28360069073F /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC01F31B0F28360069073F /* CGPath.swift */; };
@@ -36,6 +38,9 @@
 
 /* Begin PBXFileReference section */
 		72AA391C1B8C574800341E21 /* Robolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Robolayout.swift; sourceTree = "<group>"; };
+		72AA391E1B8C5B6500341E21 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		72AA39261B8C5C3900341E21 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		72AA39281B8C5C4F00341E21 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FF4ED0591B3AB20400C95C23 /* DynamicFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFont.swift; sourceTree = "<group>"; };
 		FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF72AD1A63208F00BC40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,7 +54,6 @@
 		FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		FFAF72D11A6322FE00BC40FC /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
 		FFAF72D31A63231400BC40FC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
-		FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
 		FFCD8A2A1B663231005E967F /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FFEC01F31B0F28360069073F /* CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPath.swift; sourceTree = "<group>"; };
@@ -98,16 +102,18 @@
 			children = (
 				72AA391C1B8C574800341E21 /* Robolayout.swift */,
 				FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */,
+				72AA391E1B8C5B6500341E21 /* UIView.swift */,
 				FFAF72CB1A6320F300BC40FC /* UILabel.swift */,
 				FFAF72CD1A6320F800BC40FC /* UIButton.swift */,
 				FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */,
 				FFAF72D11A6322FE00BC40FC /* UIControl.swift */,
 				FFAF72D31A63231400BC40FC /* dispatch.swift */,
-				FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */,
 				FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */,
 				FFEC01F31B0F28360069073F /* CGPath.swift */,
 				FF4ED0591B3AB20400C95C23 /* DynamicFont.swift */,
 				FFCD8A2A1B663231005E967F /* UIColor.swift */,
+				72AA39261B8C5C3900341E21 /* String.swift */,
+				72AA39281B8C5C4F00341E21 /* UIImage.swift */,
 			);
 			path = SwiftyCat;
 			sourceTree = "<group>";
@@ -246,6 +252,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AA391F1B8C5B6500341E21 /* UIView.swift in Sources */,
+				72AA39271B8C5C3A00341E21 /* String.swift in Sources */,
 				FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */,
 				FFCD8A2B1B663231005E967F /* UIColor.swift in Sources */,
 				FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */,
@@ -256,8 +264,8 @@
 				FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */,
 				FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */,
 				FF4ED05A1B3AB20400C95C23 /* DynamicFont.swift in Sources */,
-				FFCD40C81A72794F00A6AEFE /* PurchaseManager.swift in Sources */,
 				FFAF72CC1A6320F300BC40FC /* UILabel.swift in Sources */,
+				72AA39291B8C5C4F00341E21 /* UIImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

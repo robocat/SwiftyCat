@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel {
+public extension UILabel {
 	public convenience init(text : String? = nil, color : UIColor? = nil, font : UIFont? = nil, alignment : NSTextAlignment? = nil, breakLines : Bool = false) {
 		self.init(frame: CGRectZero)
 		if let text = text { self.text = text }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
 	public class func animate(duration duration : NSTimeInterval = 0.3, delay : NSTimeInterval = 0, springDamping : CGFloat? = nil, springVelocity : CGFloat? = nil, options : UIViewAnimationOptions = [], animations : Void -> Void, completion : (Void -> Void)?) {
 		if springDamping != nil || springVelocity != nil {
 			UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: springDamping ?? 0, initialSpringVelocity: springVelocity ?? 0, options: options, animations: animations, completion: { _ in completion?(); return })
