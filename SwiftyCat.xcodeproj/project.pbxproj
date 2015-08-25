@@ -13,28 +13,16 @@
 		72AA39291B8C5C4F00341E21 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AA39281B8C5C4F00341E21 /* UIImage.swift */; };
 		FF4ED05A1B3AB20400C95C23 /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4ED0591B3AB20400C95C23 /* DynamicFont.swift */; };
 		FFAF72AF1A63208F00BC40FC /* SwiftyCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FFAF72B51A63208F00BC40FC /* SwiftyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */; };
-		FFAF72BC1A63208F00BC40FC /* SwiftyCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72BB1A63208F00BC40FC /* SwiftyCatTests.swift */; };
 		FFAF72CA1A6320CC00BC40FC /* UIViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */; };
 		FFAF72CC1A6320F300BC40FC /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CB1A6320F300BC40FC /* UILabel.swift */; };
 		FFAF72CE1A6320F800BC40FC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CD1A6320F800BC40FC /* UIButton.swift */; };
 		FFAF72D01A6320FF00BC40FC /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */; };
 		FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D11A6322FE00BC40FC /* UIControl.swift */; };
-		FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* dispatch.swift */; };
+		FFAF72D41A63231400BC40FC /* Distpatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAF72D31A63231400BC40FC /* Distpatch.swift */; };
 		FFCD40CA1A727E9700A6AEFE /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */; };
 		FFCD8A2B1B663231005E967F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCD8A2A1B663231005E967F /* UIColor.swift */; };
 		FFEC01F41B0F28360069073F /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC01F31B0F28360069073F /* CGPath.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		FFAF72B61A63208F00BC40FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FFAF72A01A63208F00BC40FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FFAF72A81A63208F00BC40FC;
-			remoteInfo = SwiftyCat;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		72AA391C1B8C574800341E21 /* Robolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Robolayout.swift; sourceTree = "<group>"; };
@@ -45,15 +33,12 @@
 		FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF72AD1A63208F00BC40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyCat.h; sourceTree = "<group>"; };
-		FFAF72B41A63208F00BC40FC /* SwiftyCatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyCatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFAF72BA1A63208F00BC40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFAF72BB1A63208F00BC40FC /* SwiftyCatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyCatTests.swift; sourceTree = "<group>"; };
 		FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation.swift; sourceTree = "<group>"; };
 		FFAF72CB1A6320F300BC40FC /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		FFAF72CD1A6320F800BC40FC /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		FFAF72D11A6322FE00BC40FC /* UIControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControl.swift; sourceTree = "<group>"; };
-		FFAF72D31A63231400BC40FC /* dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dispatch.swift; sourceTree = "<group>"; };
+		FFAF72D31A63231400BC40FC /* Distpatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distpatch.swift; sourceTree = "<group>"; };
 		FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
 		FFCD8A2A1B663231005E967F /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		FFEC01F31B0F28360069073F /* CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPath.swift; sourceTree = "<group>"; };
@@ -67,14 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFAF72B11A63208F00BC40FC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FFAF72B51A63208F00BC40FC /* SwiftyCat.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +60,6 @@
 			children = (
 				FFAF72AB1A63208F00BC40FC /* SwiftyCat */,
 				FFAF72AC1A63208F00BC40FC /* Supporting Files */,
-				FFAF72B81A63208F00BC40FC /* SwiftyCatTests */,
 				FFAF72AA1A63208F00BC40FC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */,
-				FFAF72B41A63208F00BC40FC /* SwiftyCatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +82,7 @@
 				FFAF72CD1A6320F800BC40FC /* UIButton.swift */,
 				FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */,
 				FFAF72D11A6322FE00BC40FC /* UIControl.swift */,
-				FFAF72D31A63231400BC40FC /* dispatch.swift */,
+				FFAF72D31A63231400BC40FC /* Distpatch.swift */,
 				FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */,
 				FFEC01F31B0F28360069073F /* CGPath.swift */,
 				FF4ED0591B3AB20400C95C23 /* DynamicFont.swift */,
@@ -126,23 +101,6 @@
 			);
 			name = "Supporting Files";
 			path = SwiftyCat;
-			sourceTree = "<group>";
-		};
-		FFAF72B81A63208F00BC40FC /* SwiftyCatTests */ = {
-			isa = PBXGroup;
-			children = (
-				FFAF72BB1A63208F00BC40FC /* SwiftyCatTests.swift */,
-				FFAF72B91A63208F00BC40FC /* Supporting Files */,
-			);
-			path = SwiftyCatTests;
-			sourceTree = "<group>";
-		};
-		FFAF72B91A63208F00BC40FC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FFAF72BA1A63208F00BC40FC /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,24 +135,6 @@
 			productReference = FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FFAF72B31A63208F00BC40FC /* SwiftyCatTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FFAF72C21A63208F00BC40FC /* Build configuration list for PBXNativeTarget "SwiftyCatTests" */;
-			buildPhases = (
-				FFAF72B01A63208F00BC40FC /* Sources */,
-				FFAF72B11A63208F00BC40FC /* Frameworks */,
-				FFAF72B21A63208F00BC40FC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FFAF72B71A63208F00BC40FC /* PBXTargetDependency */,
-			);
-			name = SwiftyCatTests;
-			productName = SwiftyCatTests;
-			productReference = FFAF72B41A63208F00BC40FC /* SwiftyCatTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,9 +145,6 @@
 				ORGANIZATIONNAME = Robocat;
 				TargetAttributes = {
 					FFAF72A81A63208F00BC40FC = {
-						CreatedOnToolsVersion = 6.1.1;
-					};
-					FFAF72B31A63208F00BC40FC = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -225,20 +162,12 @@
 			projectRoot = "";
 			targets = (
 				FFAF72A81A63208F00BC40FC /* SwiftyCat */,
-				FFAF72B31A63208F00BC40FC /* SwiftyCatTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FFAF72A71A63208F00BC40FC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FFAF72B21A63208F00BC40FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,7 +185,7 @@
 				72AA39271B8C5C3A00341E21 /* String.swift in Sources */,
 				FFAF72D21A6322FE00BC40FC /* UIControl.swift in Sources */,
 				FFCD8A2B1B663231005E967F /* UIColor.swift in Sources */,
-				FFAF72D41A63231400BC40FC /* dispatch.swift in Sources */,
+				FFAF72D41A63231400BC40FC /* Distpatch.swift in Sources */,
 				72AA391D1B8C574800341E21 /* Robolayout.swift in Sources */,
 				FFEC01F41B0F28360069073F /* CGPath.swift in Sources */,
 				FFAF72CE1A6320F800BC40FC /* UIButton.swift in Sources */,
@@ -269,23 +198,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFAF72B01A63208F00BC40FC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FFAF72BC1A63208F00BC40FC /* SwiftyCatTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FFAF72B71A63208F00BC40FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FFAF72A81A63208F00BC40FC /* SwiftyCat */;
-			targetProxy = FFAF72B61A63208F00BC40FC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FFAF72BD1A63208F00BC40FC /* Debug */ = {
@@ -413,38 +326,6 @@
 			};
 			name = Release;
 		};
-		FFAF72C31A63208F00BC40FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftyCatTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cat.robo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		FFAF72C41A63208F00BC40FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = SwiftyCatTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cat.robo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -462,15 +343,6 @@
 			buildConfigurations = (
 				FFAF72C01A63208F00BC40FC /* Debug */,
 				FFAF72C11A63208F00BC40FC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FFAF72C21A63208F00BC40FC /* Build configuration list for PBXNativeTarget "SwiftyCatTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FFAF72C31A63208F00BC40FC /* Debug */,
-				FFAF72C41A63208F00BC40FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
