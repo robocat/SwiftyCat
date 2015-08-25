@@ -16,6 +16,11 @@ public struct ChoiceImageRowType: PressableRowType, RowTypeRefresh {
 	public func shouldRefresh(to to: RowType) -> Bool {
 		return (to as? ChoiceImageRowType)?.image?.hashValue != image?.hashValue
 	}
+    
+    public init(image: UIImage? = nil, action: Void -> Void) {
+        self.image = image
+        self.action = action
+    }
 }
 
 public class StyledImageCell: StyledTableViewCell, DeclarativeCell {

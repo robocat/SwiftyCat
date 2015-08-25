@@ -12,6 +12,11 @@ public struct ToggleRowType: RowType {
 	public static let typeId = "ToggleRowType"
 	public let value: Void -> Bool
 	public let didToggle: Bool -> Void
+    
+    public init(value: Void -> Bool, didToggle: Bool -> Void) {
+        self.value = value
+        self.didToggle = didToggle
+    }
 }
 
 public class StyledToggleCell: StyledTableViewCell, DeclarativeCell {

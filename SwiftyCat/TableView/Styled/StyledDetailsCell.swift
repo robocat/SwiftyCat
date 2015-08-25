@@ -11,11 +11,19 @@ import UIKit
 public struct DetailsRowType: PressableRowType {
 	public static let typeId = "DetailsRowType"
 	public let action: Void -> Void
+    
+    public init(action: Void -> Void) {
+        self.action = action
+    }
 }
 
 public struct ChoiceDetailsRowType: PressableRowType {
 	public static let typeId = "ChoiceDetailsRowType"
 	public let action: Void -> Void
+    
+    public init(action: Void -> Void) {
+        self.action = action
+    }
 }
 
 public class StyledDetailsCell: StyledTableViewCell {
