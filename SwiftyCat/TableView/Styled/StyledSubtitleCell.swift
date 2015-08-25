@@ -13,6 +13,11 @@ public struct ChoiceSubtitleRowType: PressableRowType, RowTypeRefresh {
 	public let action: Void -> Void
 	public let subtitle: String
 	
+    public init(action: Void -> Void, subtitle: String) {
+        self.action = action
+        self.subtitle = subtitle
+    }
+    
 	public func shouldRefresh(to to: RowType) -> Bool {
 		return (to as? ChoiceSubtitleRowType)?.subtitle != subtitle
 	}
