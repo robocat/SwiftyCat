@@ -17,7 +17,7 @@ public struct ChoiceImageRowType: PressableRowType, RowTypeRefresh {
 		return (to as? ChoiceImageRowType)?.image?.hashValue != image?.hashValue
 	}
     
-    public init(image: UIImage? = nil, action: Void -> Void) {
+    public init(action: Void -> Void, image: UIImage? = nil) {
         self.image = image
         self.action = action
     }
