@@ -26,7 +26,6 @@ public class StyledTableViewCell: UITableViewCell {
 	func setup() {
 		backgroundColor = UIColor(hex: 0x282523)
 		textLabel?.textColor = .whiteColor()
-		tintColor = .redColor()
 		
 		let selection = UIView()
 		selection.backgroundColor = UIColor(hex: 0x4b4846)
