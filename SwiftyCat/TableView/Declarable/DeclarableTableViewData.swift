@@ -9,8 +9,8 @@
 import UIKit
 
 public struct IndexPath {
-	let section: Int
-	let item: Int
+	public let section: Int
+	public let item: Int
 }
 
 public extension IndexPath {
