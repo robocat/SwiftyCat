@@ -39,6 +39,7 @@
 		72521B6F1B8C6EC400B3782B /* ForbindExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72521B6D1B8C6EC400B3782B /* ForbindExtensions.framework */; };
 		72521B701B8C6EC400B3782B /* Forbind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72521B6E1B8C6EC400B3782B /* Forbind.framework */; };
 		72521B721B8C6F1000B3782B /* Forbind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B711B8C6F1000B3782B /* Forbind.swift */; };
+		72B0ADED1B8D9619006CB317 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0ADEC1B8D9619006CB317 /* Date.swift */; };
 		FFAF72AF1A63208F00BC40FC /* SwiftyCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		72521B6D1B8C6EC400B3782B /* ForbindExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForbindExtensions.framework; path = Carthage/Build/iOS/ForbindExtensions.framework; sourceTree = "<group>"; };
 		72521B6E1B8C6EC400B3782B /* Forbind.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Forbind.framework; path = Carthage/Build/iOS/Forbind.framework; sourceTree = "<group>"; };
 		72521B711B8C6F1000B3782B /* Forbind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forbind.swift; sourceTree = "<group>"; };
+		72B0ADEC1B8D9619006CB317 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FFAF72A91A63208F00BC40FC /* SwiftyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAF72AD1A63208F00BC40FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyCat.h; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				72521B3A1B8C6D3900B3782B /* UILabel.swift */,
 				72521B3B1B8C6D3900B3782B /* UIView.swift */,
 				72521B3C1B8C6D3900B3782B /* UIViewAnimation.swift */,
+				72B0ADEC1B8D9619006CB317 /* Date.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				72521B651B8C6DB300B3782B /* StyledTableViewCell.swift in Sources */,
 				72521B4A1B8C6D3900B3782B /* UIView.swift in Sources */,
 				72521B631B8C6DB300B3782B /* StyledSubtitleCell.swift in Sources */,
+				72B0ADED1B8D9619006CB317 /* Date.swift in Sources */,
 				72521B481B8C6D3900B3782B /* UIImage.swift in Sources */,
 				72521B451B8C6D3900B3782B /* UIButton.swift in Sources */,
 				72521B461B8C6D3900B3782B /* UIColor.swift in Sources */,
