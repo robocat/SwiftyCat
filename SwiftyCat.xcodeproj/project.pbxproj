@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		72521B3D1B8C6D3900B3782B /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B2E1B8C6D3900B3782B /* CGAffineTransform.swift */; };
 		72521B3E1B8C6D3900B3782B /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B2F1B8C6D3900B3782B /* CGPath.swift */; };
-		72521B3F1B8C6D3900B3782B /* Distpatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B301B8C6D3900B3782B /* Distpatch.swift */; };
+		72521B3F1B8C6D3900B3782B /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B301B8C6D3900B3782B /* Dispatch.swift */; };
 		72521B401B8C6D3900B3782B /* DynamicFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B311B8C6D3900B3782B /* DynamicFont.swift */; };
 		72521B411B8C6D3900B3782B /* NSNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B321B8C6D3900B3782B /* NSNotificationCenter.swift */; };
 		72521B421B8C6D3900B3782B /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B331B8C6D3900B3782B /* PurchaseManager.swift */; };
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		72521B2E1B8C6D3900B3782B /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		72521B2F1B8C6D3900B3782B /* CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPath.swift; sourceTree = "<group>"; };
-		72521B301B8C6D3900B3782B /* Distpatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Distpatch.swift; sourceTree = "<group>"; };
+		72521B301B8C6D3900B3782B /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		72521B311B8C6D3900B3782B /* DynamicFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicFont.swift; sourceTree = "<group>"; };
 		72521B321B8C6D3900B3782B /* NSNotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotificationCenter.swift; sourceTree = "<group>"; };
 		72521B331B8C6D3900B3782B /* PurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 				72521B711B8C6F1000B3782B /* Forbind.swift */,
 				72521B2E1B8C6D3900B3782B /* CGAffineTransform.swift */,
 				72521B2F1B8C6D3900B3782B /* CGPath.swift */,
-				72521B301B8C6D3900B3782B /* Distpatch.swift */,
+				72521B301B8C6D3900B3782B /* Dispatch.swift */,
 				72521B311B8C6D3900B3782B /* DynamicFont.swift */,
 				72521B321B8C6D3900B3782B /* NSNotificationCenter.swift */,
 				72521B331B8C6D3900B3782B /* PurchaseManager.swift */,
@@ -307,7 +307,7 @@
 				72521B5D1B8C6DB300B3782B /* DeclarableTableViewDelegate.swift in Sources */,
 				72521B421B8C6D3900B3782B /* PurchaseManager.swift in Sources */,
 				72521B471B8C6D3900B3782B /* UIControl.swift in Sources */,
-				72521B3F1B8C6D3900B3782B /* Distpatch.swift in Sources */,
+				72521B3F1B8C6D3900B3782B /* Dispatch.swift in Sources */,
 				72521B621B8C6DB300B3782B /* StyledSelectableCell.swift in Sources */,
 				72521B441B8C6D3900B3782B /* String.swift in Sources */,
 				72521B4B1B8C6D3900B3782B /* UIViewAnimation.swift in Sources */,
