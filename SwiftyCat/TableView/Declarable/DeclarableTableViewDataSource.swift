@@ -71,7 +71,7 @@ public class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
 		
 		cell.textLabel?.text = row.title
 		cell.accessibilityLabel = (row.title as NSString).accessibilityLabel
-		
+        
 		if var cell = cell as? DeclarativeCell {
 			cell.rowType = row.type
 		}

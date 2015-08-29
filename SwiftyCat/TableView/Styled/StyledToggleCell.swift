@@ -38,6 +38,12 @@ public class StyledToggleCell: StyledTableViewCell, DeclarativeCell {
 		
 		toggle.addTarget(self, action: Selector("valueChanged"), forControlEvents: .ValueChanged)
 	}
+    
+    public override func tintColorDidChange() {
+        super.tintColorDidChange()
+        
+        toggle.onTintColor = tintColor
+    }
 	
 	func valueChanged() {
 		(rowType as? ToggleRowType)?.didToggle(toggle.on)
