@@ -14,7 +14,7 @@ public struct ChoiceImageRowType: PressableRowType, RowTypeRefresh {
 	public let image: UIImage?
 	
 	public func shouldRefresh(to to: RowType) -> Bool {
-		return (to as? ChoiceImageRowType)?.image?.hashValue != image?.hashValue
+		return (to as? ChoiceImageRowType)?.image != image
 	}
     
     public init(action: Void -> Void, image: UIImage? = nil) {

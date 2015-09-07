@@ -47,7 +47,7 @@ public class DeclarableTableViewDiff {
 		if let row1 = row1 as? Row, row2 = row2 as? Row {
 			if row1 == row2 {
 				if let rowType1 = row1.type as? RowTypeRefresh {
-					return rowType1.shouldRefresh(to: row2.type)
+					return !rowType1.shouldRefresh(to: row2.type)
 				} else {
 					return true
 				}
@@ -70,7 +70,7 @@ public class DeclarableTableViewDiff {
 				let fromRowIds = from[fromIndex].rows.map { $0 as Identifiable }
 				let toRowIds = section.rows.map { $0 as Identifiable }
 				
-				var changes = Diff.diff(fromRowIds, toRowIds, equals: rowEquals)
+				let changes = Diff.diff(fromRowIds, toRowIds, equals: rowEquals)
 				
 				if changes.count > 0 {
 					rowChanges[toIndex] = changes
@@ -83,7 +83,7 @@ public class DeclarableTableViewDiff {
 	
 	public func applySectionChange(change: Diff.Change) -> Void {
 		switch change {
-		case .Insert(let at): tableView.insertSections(NSIndexSet(index: at), withRowAnimation: .Automatic)
+        case .Insert(let at): tableView.insertSections(NSIndexSet(index: at), withRowAnimation: .Automatic)
 		case .Remove(let at): tableView.deleteSections(NSIndexSet(index: at), withRowAnimation: .Automatic)
 		case .Move(let from, let to): tableView.moveSection(from, toSection: to)
 		case .Update(let at): tableView.reloadSections(NSIndexSet(index: at), withRowAnimation: .None)
