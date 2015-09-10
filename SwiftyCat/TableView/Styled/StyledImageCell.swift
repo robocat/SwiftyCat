@@ -24,7 +24,7 @@ public struct ChoiceImageRowType: PressableRowType, RowTypeRefresh {
 }
 
 public class StyledImageCell: StyledTableViewCell, DeclarativeCell {
-	override func setup() {
+	override public func setup() {
 		super.setup()
 		
 		accessoryType = .DisclosureIndicator

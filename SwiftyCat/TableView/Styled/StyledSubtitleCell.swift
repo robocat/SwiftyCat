@@ -34,7 +34,7 @@ public class StyledSubtitleCell: StyledTableViewCell, DeclarativeCell {
 		setup()
 	}
 	
-	override func setup() {
+	override public func setup() {
 		super.setup()
 		
 		detailTextLabel?.textColor = UIColor.grayColor()

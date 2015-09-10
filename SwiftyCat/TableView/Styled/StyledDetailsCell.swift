@@ -27,7 +27,7 @@ public struct ChoiceDetailsRowType: PressableRowType {
 }
 
 public class StyledDetailsCell: StyledTableViewCell {
-	override func setup() {
+	override public func setup() {
 		super.setup()
 		
 		accessoryType = .DisclosureIndicator

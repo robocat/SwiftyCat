@@ -23,7 +23,7 @@ public class StyledTableViewCell: UITableViewCell {
 		setup()
 	}
 	
-	func setup() {
+	public func setup() {
 		backgroundColor = UIColor(hex: 0x282523)
 		textLabel?.textColor = .whiteColor()
 		

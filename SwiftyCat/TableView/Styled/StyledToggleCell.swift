@@ -30,7 +30,7 @@ public class StyledToggleCell: StyledTableViewCell, DeclarativeCell {
 		}
 	}
 	
-	override func setup() {
+	override public func setup() {
 		super.setup()
 		
 		toggle.onTintColor = tintColor
