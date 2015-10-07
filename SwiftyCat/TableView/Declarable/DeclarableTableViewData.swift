@@ -22,10 +22,10 @@ public extension IndexPath {
 
 public struct Row: Identifiable, Equatable {
 	public let id: String
-	public let title: String
+	public let title: String?
 	public let type: RowType
 	
-	public init(_ rowId: String, _ title: String, _ type: RowType) {
+	public init(_ rowId: String, _ title: String?, _ type: RowType) {
 		self.id = rowId
 		self.title = title
 		self.type = type

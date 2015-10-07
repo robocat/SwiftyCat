@@ -69,9 +69,11 @@ public class DeclarableTableViewDataSource: NSObject, UITableViewDataSource {
 		let cellId = row.type.dynamicType.typeId
 		let cell = tableView.dequeueReusableCellWithIdentifier(cellId, forIndexPath: indexPath)
 		
-		cell.textLabel?.text = row.title
-		cell.accessibilityLabel = (row.title as NSString).accessibilityLabel
-        
+		if let title = row.title {
+			cell.textLabel?.text = title
+			cell.accessibilityLabel = (title as NSString).accessibilityLabel
+		}
+		
 		if var cell = cell as? DeclarativeCell {
 			cell.rowType = row.type
 		}
