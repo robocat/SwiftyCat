@@ -61,22 +61,22 @@ public protocol RowTypeRefresh {
 }
 
 public protocol Section: Identifiable {
-	var name: String { get }
+	var name: String? { get }
 	var footer: String? { get }
 	var rows: [Row] { get }
 }
 
 public func ==(lhs: Section, rhs: Section) -> Bool {
-	return lhs.name == rhs.name && lhs.footer == rhs.footer
+	return lhs.id == rhs.id
 }
 
 public struct CustomSection: Section {
 	public var id: String
-	public var name: String
+	public var name: String?
 	public var footer: String?
 	public var rows: [Row]
 	
-	public init(_ sectionId: String, _ name: String, footer: String? = nil, _ rows: [Row]) {
+	public init(_ sectionId: String, _ name: String?, footer: String? = nil, _ rows: [Row]) {
 		self.id = sectionId
 		self.name = name
 		self.footer = footer
