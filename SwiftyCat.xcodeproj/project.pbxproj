@@ -22,18 +22,6 @@
 		72521B491B8C6D3900B3782B /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B3A1B8C6D3900B3782B /* UILabel.swift */; };
 		72521B4A1B8C6D3900B3782B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B3B1B8C6D3900B3782B /* UIView.swift */; };
 		72521B4B1B8C6D3900B3782B /* UIViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B3C1B8C6D3900B3782B /* UIViewAnimation.swift */; };
-		72521B5B1B8C6DB300B3782B /* DeclarableTableViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B4E1B8C6DB300B3782B /* DeclarableTableViewData.swift */; };
-		72521B5C1B8C6DB300B3782B /* DeclarableTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B4F1B8C6DB300B3782B /* DeclarableTableViewDataSource.swift */; };
-		72521B5D1B8C6DB300B3782B /* DeclarableTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B501B8C6DB300B3782B /* DeclarableTableViewDelegate.swift */; };
-		72521B5E1B8C6DB300B3782B /* DeclarableTableViewDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B511B8C6DB300B3782B /* DeclarableTableViewDiff.swift */; };
-		72521B5F1B8C6DB300B3782B /* Diff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B521B8C6DB300B3782B /* Diff.swift */; };
-		72521B601B8C6DB300B3782B /* StyledDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B541B8C6DB300B3782B /* StyledDetailsCell.swift */; };
-		72521B611B8C6DB300B3782B /* StyledImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B551B8C6DB300B3782B /* StyledImageCell.swift */; };
-		72521B621B8C6DB300B3782B /* StyledSelectableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B561B8C6DB300B3782B /* StyledSelectableCell.swift */; };
-		72521B631B8C6DB300B3782B /* StyledSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B571B8C6DB300B3782B /* StyledSubtitleCell.swift */; };
-		72521B641B8C6DB300B3782B /* StyledTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B581B8C6DB300B3782B /* StyledTableView.swift */; };
-		72521B651B8C6DB300B3782B /* StyledTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B591B8C6DB300B3782B /* StyledTableViewCell.swift */; };
-		72521B661B8C6DB300B3782B /* StyledToggleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B5A1B8C6DB300B3782B /* StyledToggleCell.swift */; };
 		72521B6A1B8C6E3500B3782B /* AppStoreRateCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B681B8C6E3500B3782B /* AppStoreRateCount.swift */; };
 		72521B6B1B8C6E3500B3782B /* TwitterAvatarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B691B8C6E3500B3782B /* TwitterAvatarLoader.swift */; };
 		72521B6F1B8C6EC400B3782B /* ForbindExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72521B6D1B8C6EC400B3782B /* ForbindExtensions.framework */; };
@@ -59,18 +47,6 @@
 		72521B3A1B8C6D3900B3782B /* UILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		72521B3B1B8C6D3900B3782B /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		72521B3C1B8C6D3900B3782B /* UIViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimation.swift; sourceTree = "<group>"; };
-		72521B4E1B8C6DB300B3782B /* DeclarableTableViewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarableTableViewData.swift; sourceTree = "<group>"; };
-		72521B4F1B8C6DB300B3782B /* DeclarableTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarableTableViewDataSource.swift; sourceTree = "<group>"; };
-		72521B501B8C6DB300B3782B /* DeclarableTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarableTableViewDelegate.swift; sourceTree = "<group>"; };
-		72521B511B8C6DB300B3782B /* DeclarableTableViewDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeclarableTableViewDiff.swift; sourceTree = "<group>"; };
-		72521B521B8C6DB300B3782B /* Diff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Diff.swift; sourceTree = "<group>"; };
-		72521B541B8C6DB300B3782B /* StyledDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledDetailsCell.swift; sourceTree = "<group>"; };
-		72521B551B8C6DB300B3782B /* StyledImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledImageCell.swift; sourceTree = "<group>"; };
-		72521B561B8C6DB300B3782B /* StyledSelectableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledSelectableCell.swift; sourceTree = "<group>"; };
-		72521B571B8C6DB300B3782B /* StyledSubtitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledSubtitleCell.swift; sourceTree = "<group>"; };
-		72521B581B8C6DB300B3782B /* StyledTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledTableView.swift; sourceTree = "<group>"; };
-		72521B591B8C6DB300B3782B /* StyledTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledTableViewCell.swift; sourceTree = "<group>"; };
-		72521B5A1B8C6DB300B3782B /* StyledToggleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyledToggleCell.swift; sourceTree = "<group>"; };
 		72521B681B8C6E3500B3782B /* AppStoreRateCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreRateCount.swift; sourceTree = "<group>"; };
 		72521B691B8C6E3500B3782B /* TwitterAvatarLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAvatarLoader.swift; sourceTree = "<group>"; };
 		72521B6D1B8C6EC400B3782B /* ForbindExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForbindExtensions.framework; path = Carthage/Build/iOS/ForbindExtensions.framework; sourceTree = "<group>"; };
@@ -119,41 +95,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		72521B4C1B8C6DB300B3782B /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				72521B521B8C6DB300B3782B /* Diff.swift */,
-				72521B4D1B8C6DB300B3782B /* Declarable */,
-				72521B531B8C6DB300B3782B /* Styled */,
-			);
-			path = TableView;
-			sourceTree = "<group>";
-		};
-		72521B4D1B8C6DB300B3782B /* Declarable */ = {
-			isa = PBXGroup;
-			children = (
-				72521B4E1B8C6DB300B3782B /* DeclarableTableViewData.swift */,
-				72521B4F1B8C6DB300B3782B /* DeclarableTableViewDataSource.swift */,
-				72521B501B8C6DB300B3782B /* DeclarableTableViewDelegate.swift */,
-				72521B511B8C6DB300B3782B /* DeclarableTableViewDiff.swift */,
-			);
-			path = Declarable;
-			sourceTree = "<group>";
-		};
-		72521B531B8C6DB300B3782B /* Styled */ = {
-			isa = PBXGroup;
-			children = (
-				72521B541B8C6DB300B3782B /* StyledDetailsCell.swift */,
-				72521B551B8C6DB300B3782B /* StyledImageCell.swift */,
-				72521B561B8C6DB300B3782B /* StyledSelectableCell.swift */,
-				72521B571B8C6DB300B3782B /* StyledSubtitleCell.swift */,
-				72521B581B8C6DB300B3782B /* StyledTableView.swift */,
-				72521B591B8C6DB300B3782B /* StyledTableViewCell.swift */,
-				72521B5A1B8C6DB300B3782B /* StyledToggleCell.swift */,
-			);
-			path = Styled;
-			sourceTree = "<group>";
-		};
 		72521B671B8C6E3500B3782B /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				72521B2D1B8C6D3900B3782B /* Utilities */,
-				72521B4C1B8C6DB300B3782B /* TableView */,
 				72521B671B8C6E3500B3782B /* Library */,
 			);
 			path = SwiftyCat;
@@ -289,32 +229,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				72521B401B8C6D3900B3782B /* DynamicFont.swift in Sources */,
-				72521B5E1B8C6DB300B3782B /* DeclarableTableViewDiff.swift in Sources */,
-				72521B5C1B8C6DB300B3782B /* DeclarableTableViewDataSource.swift in Sources */,
-				72521B601B8C6DB300B3782B /* StyledDetailsCell.swift in Sources */,
 				72521B6B1B8C6E3500B3782B /* TwitterAvatarLoader.swift in Sources */,
-				72521B641B8C6DB300B3782B /* StyledTableView.swift in Sources */,
 				72521B491B8C6D3900B3782B /* UILabel.swift in Sources */,
 				72521B411B8C6D3900B3782B /* NSNotificationCenter.swift in Sources */,
 				72521B721B8C6F1000B3782B /* Forbind.swift in Sources */,
-				72521B611B8C6DB300B3782B /* StyledImageCell.swift in Sources */,
 				72521B3E1B8C6D3900B3782B /* CGPath.swift in Sources */,
 				72521B6A1B8C6E3500B3782B /* AppStoreRateCount.swift in Sources */,
-				72521B5F1B8C6DB300B3782B /* Diff.swift in Sources */,
-				72521B5B1B8C6DB300B3782B /* DeclarableTableViewData.swift in Sources */,
 				72521B3D1B8C6D3900B3782B /* CGAffineTransform.swift in Sources */,
-				72521B661B8C6DB300B3782B /* StyledToggleCell.swift in Sources */,
-				72521B5D1B8C6DB300B3782B /* DeclarableTableViewDelegate.swift in Sources */,
 				72521B421B8C6D3900B3782B /* PurchaseManager.swift in Sources */,
 				72521B471B8C6D3900B3782B /* UIControl.swift in Sources */,
 				72521B3F1B8C6D3900B3782B /* Dispatch.swift in Sources */,
-				72521B621B8C6DB300B3782B /* StyledSelectableCell.swift in Sources */,
 				72521B441B8C6D3900B3782B /* String.swift in Sources */,
 				72521B4B1B8C6D3900B3782B /* UIViewAnimation.swift in Sources */,
 				72521B431B8C6D3900B3782B /* Robolayout.swift in Sources */,
-				72521B651B8C6DB300B3782B /* StyledTableViewCell.swift in Sources */,
 				72521B4A1B8C6D3900B3782B /* UIView.swift in Sources */,
-				72521B631B8C6DB300B3782B /* StyledSubtitleCell.swift in Sources */,
 				72B0ADED1B8D9619006CB317 /* Date.swift in Sources */,
 				72521B481B8C6D3900B3782B /* UIImage.swift in Sources */,
 				72521B451B8C6D3900B3782B /* UIButton.swift in Sources */,
