@@ -9,7 +9,7 @@
 import Foundation
 import Forbind
 
-public func handleError<T>(onError: NSError -> Void)(_ result: Result<T>) -> T? {
+public func handleError<T>(onError: ErrorType -> Void)(_ result: Result<T>) -> T? {
 	switch result {
 	case .Error(let error):
 		onError(error)
