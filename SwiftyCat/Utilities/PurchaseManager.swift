@@ -114,7 +114,7 @@ public class PurchaseManager : NSObject {
 	
 	private func transactionHasFailed(transaction : SKPaymentTransaction, queue : SKPaymentQueue) {
 		if let error = transaction.error {
-			if error.code == SKErrorPaymentCancelled {
+			if error.code == SKErrorCode.PaymentCancelled.rawValue {
 				purchaseCompletion?(.Cancelled)
 			} else {
 				purchaseCompletion?(.Failure(error: error))
