@@ -24,8 +24,6 @@
 		72521B4B1B8C6D3900B3782B /* UIViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B3C1B8C6D3900B3782B /* UIViewAnimation.swift */; };
 		72521B6A1B8C6E3500B3782B /* AppStoreRateCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B681B8C6E3500B3782B /* AppStoreRateCount.swift */; };
 		72521B6B1B8C6E3500B3782B /* TwitterAvatarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B691B8C6E3500B3782B /* TwitterAvatarLoader.swift */; };
-		72521B6F1B8C6EC400B3782B /* ForbindExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72521B6D1B8C6EC400B3782B /* ForbindExtensions.framework */; };
-		72521B701B8C6EC400B3782B /* Forbind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72521B6E1B8C6EC400B3782B /* Forbind.framework */; };
 		72521B721B8C6F1000B3782B /* Forbind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B711B8C6F1000B3782B /* Forbind.swift */; };
 		72B0ADED1B8D9619006CB317 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B0ADEC1B8D9619006CB317 /* Date.swift */; };
 		FFAF72AF1A63208F00BC40FC /* SwiftyCat.h in Headers */ = {isa = PBXBuildFile; fileRef = FFAF72AE1A63208F00BC40FC /* SwiftyCat.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,8 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72521B6F1B8C6EC400B3782B /* ForbindExtensions.framework in Frameworks */,
-				72521B701B8C6EC400B3782B /* Forbind.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,10 +344,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = SwiftyCat/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -372,10 +364,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = SwiftyCat/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
