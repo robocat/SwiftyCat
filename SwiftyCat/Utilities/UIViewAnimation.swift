@@ -9,19 +9,19 @@
 import UIKit
 
 public extension UIView {
-	public class func animate(duration duration : NSTimeInterval = 0.3, delay : NSTimeInterval = 0, springDamping : CGFloat? = nil, springVelocity : CGFloat? = nil, options : UIViewAnimationOptions = [], animations : Void -> Void, completion : (Void -> Void)?) {
+	public class func animate(duration : TimeInterval = 0.3, delay : TimeInterval = 0, springDamping : CGFloat? = nil, springVelocity : CGFloat? = nil, options : UIViewAnimationOptions = [], animations : (Void) -> Void, completion : ((Void) -> Void)?) {
 		if springDamping != nil || springVelocity != nil {
-			UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: springDamping ?? 0, initialSpringVelocity: springVelocity ?? 0, options: options, animations: animations, completion: { _ in completion?(); return })
+			UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: springDamping ?? 0, initialSpringVelocity: springVelocity ?? 0, options: options, animations: animations, completion: { _ in completion?(); return })
 		} else {
-			UIView.animateWithDuration(duration, delay: delay, options: options, animations: animations, completion: { _ in completion?(); return })
+			UIView.animate(withDuration: duration, delay: delay, options: options, animations: animations, completion: { _ in completion?(); return })
 		}
 	}
 	
-	public class func animate(duration duration : NSTimeInterval = 0.3, delay : NSTimeInterval = 0, springDamping : CGFloat? = nil, springVelocity : CGFloat? = nil, options : UIViewAnimationOptions = [], animations : Void -> Void) {
+	public class func animate(duration : TimeInterval = 0.3, delay : TimeInterval = 0, springDamping : CGFloat? = nil, springVelocity : CGFloat? = nil, options : UIViewAnimationOptions = [], animations : (Void) -> Void) {
 		if springDamping != nil || springVelocity != nil {
-			UIView.animateWithDuration(duration, delay: delay, usingSpringWithDamping: springDamping ?? 0, initialSpringVelocity: springVelocity ?? 0, options: options, animations: animations, completion: nil)
+			UIView.animate(withDuration: duration, delay: delay, usingSpringWithDamping: springDamping ?? 0, initialSpringVelocity: springVelocity ?? 0, options: options, animations: animations, completion: nil)
 		} else {
-			UIView.animateWithDuration(duration, delay: delay, options: options, animations: animations, completion: nil)
+			UIView.animate(withDuration: duration, delay: delay, options: options, animations: animations, completion: nil)
 		}
 	}
 }

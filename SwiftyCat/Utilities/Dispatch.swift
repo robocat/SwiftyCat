@@ -8,16 +8,16 @@
 
 import Foundation
 
-public func dispatch_main(block: Void -> Void) {
-	dispatch_async(dispatch_get_main_queue(), block)
-}
-
-public func dispatch_background(block: Void -> Void) {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), block)
-}
-
-public func dispatch_after(seconds: Double, queue: dispatch_queue_t? = nil, callback: Void -> Void) {
-    let dispatch_to: dispatch_queue_t = queue ?? dispatch_get_main_queue()
-	let time = dispatch_time(DISPATCH_TIME_NOW, Int64(seconds * Double(NSEC_PER_SEC)))
-	dispatch_after(time, dispatch_to, callback)
-}
+//public func dispatch_main(_ block: (Void) -> Void) {
+//	DispatchQueue.main.async(execute: block)
+//}
+//
+//public func dispatch_background(_ block: (Void) -> Void) {
+//    DispatchQueue.global(attributes: DispatchQueue.GlobalAttributes.qosBackground).async(execute: block)
+//}
+//
+//public func dispatch_after(_ seconds: Double, queue: DispatchQueue? = nil, callback: (Void) -> Void) {
+//    let dispatch_to: DispatchQueue = queue ?? DispatchQueue.main
+//	let time = DispatchTime.now() + Double(Int64(seconds * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+//	dispatch_to.after(when: time, block: callback)
+//}

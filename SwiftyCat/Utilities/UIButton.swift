@@ -9,11 +9,11 @@
 import UIKit
 
 public extension UIButton {
-	public class func button(title title : String? = nil, backColor : UIColor? = nil, titleColor : UIColor? = nil, font : UIFont? = nil, cornerRadius : CGFloat? = nil) -> UIButton {
-		let button = UIButton(type: .Custom)
-		if let title = title { button.setTitle(title, forState: .Normal) }
+	public class func button(title : String? = nil, backColor : UIColor? = nil, titleColor : UIColor? = nil, font : UIFont? = nil, cornerRadius : CGFloat? = nil) -> UIButton {
+		let button = UIButton(type: .custom)
+		if let title = title { button.setTitle(title, for: UIControlState()) }
 		if let backColor = backColor { button.backgroundColor = backColor }
-		if let titleColor = titleColor { button.setTitleColor(titleColor, forState: .Normal) }
+		if let titleColor = titleColor { button.setTitleColor(titleColor, for: UIControlState()) }
 		if let font = font { button.titleLabel?.font = font }
 		
 		if let cornerRadius = cornerRadius {

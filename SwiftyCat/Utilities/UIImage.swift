@@ -13,33 +13,33 @@ public extension UIImage {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
-    public class func imageWithColor(color : UIColor) -> UIImage {
+    public class func imageWithColor(_ color : UIColor) -> UIImage {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         color.setFill()
         UIBezierPath(rect: CGRect(x: 0, y: 0, width: 1, height: 1)).fill()
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
     public func resized(to size : CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
-        drawInRect(CGRect(origin: CGPointZero, size: size))
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main().scale)
+        draw(in: CGRect(origin: CGPoint.zero, size: size))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
     
     public func masked(with mask : UIImage) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
-        let rect = CGRect(origin: CGPointZero, size: size)
-        CGContextClipToMask(UIGraphicsGetCurrentContext(), rect, mask.CGImage)
-        drawInRect(rect)
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main().scale)
+        let rect = CGRect(origin: CGPoint.zero, size: size)
+        UIGraphicsGetCurrentContext()?.clipToMask(rect, mask: mask.cgImage!)
+        draw(in: rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
 }

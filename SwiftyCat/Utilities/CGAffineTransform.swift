@@ -10,26 +10,26 @@ import CoreGraphics
 
 extension CGAffineTransform {
 	public init() {
-		self = CGAffineTransformIdentity
+		self = CGAffineTransform.identity
 	}
 	
 	public static var identity : CGAffineTransform {
-		return CGAffineTransformIdentity
+		return CGAffineTransform.identity
 	}
 	
-	public func translate(x x : CGFloat, y : CGFloat) -> CGAffineTransform {
-		return CGAffineTransformTranslate(self, x, y)
+	public func translate(x : CGFloat, y : CGFloat) -> CGAffineTransform {
+		return self.translateBy(x: x, y: y)
 	}
 	
-	public func rotate(angle : Double) -> CGAffineTransform {
-		return CGAffineTransformRotate(self, CGFloat(angle))
+	public func rotate(_ angle : Double) -> CGAffineTransform {
+		return self.rotate(CGFloat(angle))
 	}
 	
-	public func scale(x x : CGFloat, y : CGFloat) -> CGAffineTransform {
-		return CGAffineTransformScale(self, x, y)
+	public func scale(x : CGFloat, y : CGFloat) -> CGAffineTransform {
+		return self.scaleBy(x: x, y: y)
 	}
 	
-	public func scale(scale : CGFloat) -> CGAffineTransform {
-		return CGAffineTransformScale(self, scale, scale)
+	public func scale(_ scale : CGFloat) -> CGAffineTransform {
+		return self.scaleBy(x: scale, y: scale)
 	}
 }

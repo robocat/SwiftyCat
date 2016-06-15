@@ -9,11 +9,11 @@
 import UIKit
 
 extension UIControl {
-	public func addUpdateAction(target target : AnyObject?, action : Selector!) {
-		addTarget(target, action: action, forControlEvents: .ValueChanged)
+	public func addUpdateAction(target : AnyObject?, action : Selector!) {
+		addTarget(target, action: action, for: .valueChanged)
 	}
 	
-	public func addTouchAction(target target : AnyObject?, action : Selector!) {
-		addTarget(target, action: action, forControlEvents: .TouchUpInside)
+	public func addTouchAction(target : AnyObject?, action : Selector!) {
+		addTarget(target, action: action, for: .touchUpInside)
 	}
 }

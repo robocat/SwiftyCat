@@ -9,57 +9,57 @@
 import CoreGraphics
 
 extension CGPath {
-	public static func pathWithRect(rect : CGRect) -> CGPath {
-		return CGPathCreateWithRect(rect, nil)
+	public static func pathWithRect(_ rect : CGRect) -> CGPath {
+		return CGPath(rect: rect, transform: nil)
 	}
 	
 	public static func pathWithEllipse(inRect rect : CGRect) -> CGPath {
-		return CGPathCreateWithEllipseInRect(rect, nil)
+		return CGPath(ellipseIn: rect, transform: nil)
 	}
 	
-	public static func pathWithRoundedRect(rect : CGRect, cornerSize : CGSize) -> CGPath {
-		return CGPathCreateWithRoundedRect(rect, cornerSize.width, cornerSize.height, nil)
+	public static func pathWithRoundedRect(_ rect : CGRect, cornerSize : CGSize) -> CGPath {
+		return CGPath(roundedRect: rect, cornerWidth: cornerSize.width, cornerHeight: cornerSize.height, transform: nil)
 	}
 	
 	public func mutableCopy() -> CGMutablePath {
-		return CGPathCreateMutableCopy(self)!
+		return self.mutableCopy()!
 	}
 	
-	public func containsPoint(point : CGPoint) -> Bool {
-		return CGPathContainsPoint(self, nil, point, false)
+	public func containsPoint(_ point : CGPoint) -> Bool {
+		return self.containsPoint(nil, point: point, eoFill: false)
 	}
 	
 	public func boundingBox() -> CGRect {
-		return CGPathGetPathBoundingBox(self)
+		return self.boundingBoxOfPath
 	}
 	
 	public var currentPoint : CGPoint {
-		return CGPathGetCurrentPoint(self)
+		return self.currentPoint
 	}
 }
 
 extension CGMutablePath {
 	public static func mutablePath() -> CGMutablePath {
-		return CGPathCreateMutable()
+		return CGMutablePath()
 	}
 	
-	public func moveToPoint(point : CGPoint) {
-		CGPathMoveToPoint(self, nil, point.x, point.y)
+	public func moveToPoint(_ point : CGPoint) {
+		self.moveTo(nil, x: point.x, y: point.y)
 	}
 	
-	public func moveToPoint(x x : CGFloat, y : CGFloat) {
-		CGPathMoveToPoint(self, nil, x, y)
+	public func moveToPoint(x : CGFloat, y : CGFloat) {
+		self.moveTo(nil, x: x, y: y)
 	}
 	
-	public func addLineToPoint(point : CGPoint) {
-		CGPathAddLineToPoint(self, nil, point.x, point.y)
+	public func addLineToPoint(_ point : CGPoint) {
+		self.addLineTo(nil, x: point.x, y: point.y)
 	}
 	
-	public func addLineToPoint(x x : CGFloat, y : CGFloat) {
-		CGPathAddLineToPoint(self, nil, x, y)
+	public func addLineToPoint(x : CGFloat, y : CGFloat) {
+		self.addLineTo(nil, x: x, y: y)
 	}
 	
 	public func closeSubpath() {
-		CGPathCloseSubpath(self)
+		self.closeSubpath()
 	}
 }

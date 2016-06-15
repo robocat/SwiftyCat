@@ -9,7 +9,7 @@
 import Foundation
 
 public extension String {
-    public func format(args : CVarArgType...) -> String {
+    public func format(_ args : CVarArg...) -> String {
         return NSString(format: self, arguments: getVaList(args)) as String
     }
 }

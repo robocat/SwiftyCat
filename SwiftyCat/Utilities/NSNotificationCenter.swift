@@ -8,18 +8,18 @@
 
 import Foundation
 
-public extension NSNotificationCenter {
-	public class func postNotification(name : String, from : AnyObject?, info : [String: AnyObject]? = nil) {
-		NSNotificationCenter.defaultCenter().postNotificationName(name, object: from, userInfo: info)
+public extension NotificationCenter {
+	public class func postNotification(_ name : String, from : AnyObject?, info : [String: AnyObject]? = nil) {
+		NotificationCenter.default().post(name: Notification.Name(rawValue: name), object: from, userInfo: info)
 	}
     
-    public class func on(notification : String, on : AnyObject? = nil, doThis : NSNotification -> Void) {
-        defaultCenter().addObserverForName(notification, object: on, queue: nil, usingBlock: doThis)
+    public class func on(_ notification : String, on : AnyObject? = nil, doThis : (Notification) -> Void) {
+        `default`().addObserver(forName: NSNotification.Name(rawValue: notification), object: on, queue: nil, using: doThis)
     }
 }
 
-extension NSNotification {
+extension Notification {
 	subscript(key : String) -> AnyObject? {
-		return userInfo?[key]
+		return userInfo?[key] as? AnyObject
 	}
 }

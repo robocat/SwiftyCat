@@ -8,14 +8,14 @@
 
 import Foundation
 
-public func minutes(timeInterval : NSTimeInterval) -> NSTimeInterval {
+public func minutes(_ timeInterval : TimeInterval) -> TimeInterval {
     return timeInterval * 60
 }
 
-public func hours(timeInterval : NSTimeInterval) -> NSTimeInterval {
+public func hours(_ timeInterval : TimeInterval) -> TimeInterval {
     return minutes(timeInterval) * 60
 }
 
-public func days(timeInterval : NSTimeInterval) -> NSTimeInterval {
+public func days(_ timeInterval : TimeInterval) -> TimeInterval {
     return hours(timeInterval) * 24
 }
