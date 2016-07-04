@@ -36,7 +36,7 @@ public class StyledToggleCell: StyledTableViewCell, DeclarativeCell {
 		toggle.onTintColor = tintColor
 		accessoryView = toggle
 		
-		toggle.addTarget(self, action: Selector("valueChanged"), forControlEvents: .ValueChanged)
+		toggle.addTarget(self, action: #selector(StyledToggleCell.valueChanged), forControlEvents: .ValueChanged)
 	}
     
     public override func tintColorDidChange() {

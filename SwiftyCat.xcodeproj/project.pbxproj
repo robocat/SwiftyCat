@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF1BD8311B42AD090019C74F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1BD8301B42AD090019C74F /* Array.swift */; };
 		72521B3D1B8C6D3900B3782B /* CGAffineTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B2E1B8C6D3900B3782B /* CGAffineTransform.swift */; };
 		72521B3E1B8C6D3900B3782B /* CGPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B2F1B8C6D3900B3782B /* CGPath.swift */; };
 		72521B3F1B8C6D3900B3782B /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72521B301B8C6D3900B3782B /* Dispatch.swift */; };
@@ -45,7 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF1BD8301B42AD090019C74F /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		72521B2E1B8C6D3900B3782B /* CGAffineTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransform.swift; sourceTree = "<group>"; };
 		72521B2F1B8C6D3900B3782B /* CGPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPath.swift; sourceTree = "<group>"; };
 		72521B301B8C6D3900B3782B /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
@@ -195,17 +193,6 @@
 		FFAF72AB1A63208F00BC40FC /* SwiftyCat */ = {
 			isa = PBXGroup;
 			children = (
-				FFAF72C71A6320C400BC40FC /* UIViewAutolayout.swift */,
-				FFAF72C91A6320CC00BC40FC /* UIViewAnimation.swift */,
-				FFAF72CB1A6320F300BC40FC /* UILabel.swift */,
-				FFAF72CD1A6320F800BC40FC /* UIButton.swift */,
-				FFAF72CF1A6320FF00BC40FC /* CGAffineTransform.swift */,
-				FFAF72D11A6322FE00BC40FC /* UIControl.swift */,
-				FFAF72D31A63231400BC40FC /* dispatch.swift */,
-				FFCD40C71A72794F00A6AEFE /* PurchaseManager.swift */,
-				FFCD40C91A727E9700A6AEFE /* NSNotificationCenter.swift */,
-				FFEC01F31B0F28360069073F /* CGPath.swift */,
-				FF1BD8301B42AD090019C74F /* Array.swift */,
 				72521B2D1B8C6D3900B3782B /* Utilities */,
 				72521B4C1B8C6DB300B3782B /* TableView */,
 				72521B671B8C6E3500B3782B /* Library */,
@@ -301,7 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1BD8311B42AD090019C74F /* Array.swift in Sources */,
 				72521B401B8C6D3900B3782B /* DynamicFont.swift in Sources */,
 				72521B5E1B8C6DB300B3782B /* DeclarableTableViewDiff.swift in Sources */,
 				72521B5C1B8C6DB300B3782B /* DeclarableTableViewDataSource.swift in Sources */,
