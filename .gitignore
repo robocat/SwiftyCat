@@ -3,6 +3,7 @@
 \#*\#
 .\#*
 
+Build/
 DerivedData/
 Carthage/
 *~.nib
