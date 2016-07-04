@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIButton {
-	public class func button(title : String? = nil, backColor : UIColor? = nil, titleColor : UIColor? = nil, font : UIFont? = nil, cornerRadius : CGFloat? = nil) -> UIButton {
-		let button = buttonWithType(.Custom) as! UIButton
+public extension UIButton {
+	public class func button(title title : String? = nil, backColor : UIColor? = nil, titleColor : UIColor? = nil, font : UIFont? = nil, cornerRadius : CGFloat? = nil) -> UIButton {
+		let button = UIButton(type: .Custom)
 		if let title = title { button.setTitle(title, forState: .Normal) }
 		if let backColor = backColor { button.backgroundColor = backColor }
 		if let titleColor = titleColor { button.setTitleColor(titleColor, forState: .Normal) }
