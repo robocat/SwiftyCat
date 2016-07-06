@@ -67,7 +67,7 @@ public protocol Section: Identifiable {
 }
 
 public func ==(lhs: Section, rhs: Section) -> Bool {
-	return lhs.id == rhs.id
+	return lhs.id == rhs.id && lhs.name == rhs.name && lhs.footer == rhs.footer
 }
 
 public struct CustomSection: Section {
